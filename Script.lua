@@ -78,7 +78,7 @@ gg.processKill()
 
 gg.processKill()
 
-gg.alert("Khi Vào Lại Game Nhớ Tắt Tường Lửa 👍\nChọn Khởi động lại trò chơi")
+gg.alert("Khi Vào Lại Game Nhớ Tắt Tường Lửa 👍\nChọn Khởi động lại trò chơi\nVui Lòng Chọn Lại Liên Quân Mobile Có MB Cao Nhất")
 
 os.exit()
 
