@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghackk_22_06_2023","t")
+pass("hmghackk_22_06_2023","hmghak_1h_test_key","t")
 
 gg.alert("⚠️ CẢNH BÁO ⚠️\n👉 Vui Lòng Bật Hack Sau Khi Đã Bật Tường Lửa Và Không Tắt Đến Hết Trận\n👉 Kết Thúc Trận Chọn Thoát Trận Trong Menu\n👉 Mọi Sự Ngu Dốt Của Bạn Thì Bạn Phải Chấp Nhận")
 
