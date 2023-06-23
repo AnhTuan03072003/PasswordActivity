@@ -588,8 +588,6 @@ end
 
             setHexMemory("libil2cpp.so", 0xFC4E30, "01 00 A0 E3")
 
-            setHexMemory("libil2cpp.so", 0xFC4E34, "1E FF 2F E1")
-
             
             
             
