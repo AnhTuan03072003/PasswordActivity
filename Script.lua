@@ -44,7 +44,7 @@ menu = gg.multiChoice({
 
 "👉Aim Full Tướng",
 
-"👉Show Untii",
+"👉Show Unti",
 
 "👉Unlock 120FPS",
 "👉Bypass Report [Trận]",
@@ -503,12 +503,18 @@ end
 
             setHexMemory("libil2cpp.so", 0x170458C, "01 00 A0 E3")
 
-            
+            setHexMemory("libil2cpp.so", 0x1704590, "1E FF 2F E1")
+
             setHexMemory("libil2cpp.so", 0x1AE7DB4, "01 00 A0 E3")
-            
-           
+
+            setHexMemory("libil2cpp.so", 0x1AE7DB8, "1E FF 2F E1")
+
             setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3")
 
+            setHexMemory("libil2cpp.so", 0x1AE7F0C, "1E FF 2F E1")
+             
+            
+            
             
 gg.toast("Show Unti On✅")
 
