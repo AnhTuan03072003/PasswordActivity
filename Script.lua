@@ -512,8 +512,8 @@ end
 
             setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3")
 
-            setHexMemory("libil2cpp.so", 0x1AE7F0C, "1E FF 2F E1")
- setHexMemory("libil2cpp.so", 0x1AE9CA4, "01 00 A0 E3")
+            
+             setHexMemory("libil2cpp.so", 0x1AE9CA4, "01 00 A0 E3")
 
             setHexMemory("libil2cpp.so", 0x1AE9CA8, "1E FF 2F E1")
             
