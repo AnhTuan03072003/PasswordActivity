@@ -34,17 +34,20 @@ function Main()
 
 menu = gg.multiChoice({
 
-"Thoát Khi Kết Thúc Trận [Bắt Buộc]",
+"🛡️Thoát Khi Kết Thúc Trận [Bắt Buộc - ANTIBAN]",
 
-"MAP SÁNG [BẬT TƯỜNG LỬA HẾT TRẬN]",
+"👉Map Sáng",
 
-"ẨN TÊN [BẬT TƯỜNG LỬA HẾT TRẬN]",
+"👉Đổi Tên",
 
-"Unlock Cam Xa 3 Nấc [BẬT TƯỜNG LỬA HẾT TRẬN]",
+"👉Unlock Cam Xa 3 Nấc",
 
-"Aim Full Tướng ⚠️ [BẬT TƯỜNG LỬA HẾT TRẬN]",
+"👉Aim Full Tướng",
 
-"Bypass Report [Trận]",
+"👉Show Unti",
+
+"👉Unlock 120FPS",
+"👉Bypass Report [Trận]",
 
 "Thoát"
 
@@ -65,6 +68,10 @@ if menu[5] == true then a5() end
 if menu[6] == true then a6() end
 
 if menu[7] == true then a7() end
+
+if menu[8] == true then a8() end
+
+if menu[9] == true then a9() end
 
 end
 
@@ -170,7 +177,7 @@ end
 
    
 
-gg.toast("🔦 Đèn Pin Đã Sáng")
+gg.toast("🔦 Đèn Pin Đã Sáng Rồi 😂")
 
 end
 
@@ -254,7 +261,7 @@ end
 
     
 
-gg.toast("🤫 Đã Che Tên")
+gg.toast("Đổi Tên On✅")
 
 end
 
@@ -338,9 +345,10 @@ end
 
             setHexMemory("libil2cpp.so", 0xFD4190, "1E FF 2F E1")
 
-gg.toast("Unlock Cam Xa")
+gg.toast("Unlock Cam Xa On✅")
 
 end
+
 
 function a5()
 
@@ -422,7 +430,186 @@ gg.alert("AIM FULL TƯỚNG ON\nAIM TƯỚNG KHÁC LANE CHỌN PHẠM VỊ GẦN
 
 end
 
+
 function a6()
+
+local n, startAddress, endAddress = nil, 0, 0
+
+local function name(lib)
+
+ if n == lib then
+
+  return startAddress, endAddress
+
+ end
+
+ local ranges = gg.getRangesList(lib or 'libil2cpp.so')
+
+ for i, v in ipairs(ranges) do
+
+  if v.state == "Xa" then
+
+   startAddress = v.start
+
+   endAddress = ranges[#ranges]['end']
+
+   break
+
+  end
+
+ end
+
+ return startAddress, endAddress
+
+end
+
+local function setHexMemory(libname, offset, hex)
+
+ name(libname)
+
+ local t, total = {}, 0
+
+ for h in string.gmatch(hex, "%S%S") do
+
+     table.insert(t, {
+
+         address = startAddress + offset + total,
+
+         flags = gg.TYPE_BYTE,
+
+         value = h .. "r"
+
+     })
+
+     total = total + 1
+
+ end
+
+ local res = gg.setValues(t)
+
+ if type(res) ~= 'string' then
+
+  return trueo
+
+ else
+
+  gg.alert(res)
+
+  return false
+
+ end
+
+end
+
+            setHexMemory("libil2cpp.so", 0x170458C, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0x1704590, "1E FF 2F E1")
+
+            setHexMemory("libil2cpp.so", 0x1AE7DB4, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0x1AE7DB8, "1E FF 2F E1")
+
+            setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0x1AE7F0C, "1E FF 2F E1")
+ setHexMemory("libil2cpp.so", 0x1AE9CA4, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0x1AE9CA8, "1E FF 2F E1")
+            
+            
+            
+gg.toast("Show Unti On✅")
+
+end
+
+
+function a7()
+local n, startAddress, endAddress = nil, 0, 0
+
+local function name(lib)
+
+ if n == lib then
+
+  return startAddress, endAddress
+
+ end
+
+ local ranges = gg.getRangesList(lib or 'libil2cpp.so')
+
+ for i, v in ipairs(ranges) do
+
+  if v.state == "Xa" then
+
+   startAddress = v.start
+
+   endAddress = ranges[#ranges]['end']
+
+   break
+
+  end
+
+ end
+
+ return startAddress, endAddress
+
+end
+
+local function setHexMemory(libname, offset, hex)
+
+ name(libname)
+
+ local t, total = {}, 0
+
+ for h in string.gmatch(hex, "%S%S") do
+
+     table.insert(t, {
+
+         address = startAddress + offset + total,
+
+         flags = gg.TYPE_BYTE,
+
+         value = h .. "r"
+
+     })
+
+     total = total + 1
+
+ end
+
+ local res = gg.setValues(t)
+
+ if type(res) ~= 'string' then
+
+  return trueo
+
+ else
+
+  gg.alert(res)
+
+  return false
+
+ end
+
+end
+
+            setHexMemory("libil2cpp.so", 0xFC4D3C, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0xFC4D40, "1E FF 2F E1")
+
+            setHexMemory("libil2cpp.so", 0xFC4E30, "01 00 A0 E3")
+
+            setHexMemory("libil2cpp.so", 0xFC4E34, "1E FF 2F E1")
+
+            
+            
+            
+gg.toast("Unlock FPS✅")
+
+end
+
+
+
+function a8()
 
 gg.clearResults()
 
@@ -470,42 +657,10 @@ gg.toast("XOÁ TỐ CÁO THÀNH CÔNG")
 
 end
 
-function a7()
 
-print("      ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀  ")
 
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
 
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔶🔶 TELEGRAM: @hmghak                 🔶🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔶🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("    🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔶🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸 ")
-
-    print("      ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀  \n \n")
-
+function a9()
 os.exit()
 
 end
