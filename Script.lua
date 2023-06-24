@@ -501,6 +501,11 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
+
+ setHexMemory("libil2cpp.so", 0x10D4434, "00 00 A0 E3 1E FF 2F E1")
+
+setHexMemory("libil2cpp.so", 0x12460C0, "00 00 A0 E3 1E FF 2F E1")
+ 
  
       setHexMemory("libil2cpp.so", 0x170458C, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x171039C, "00 00 A0 E3 1E FF 2F E1")
@@ -508,8 +513,7 @@ setHexMemory("libil2cpp.so", 0x18EF804, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x197C6D0, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x1AE7DB4, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x1AE7F08, "00 00 A0 E3 1E FF 2F E1")
- setHexMemory("libil2cpp.so", 0x1af3f50, "00 00 A0 E3 1E FF 2F E1")
-
+ 
             
 gg.toast("Show Unti On✅")
 
