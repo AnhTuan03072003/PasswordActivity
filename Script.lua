@@ -410,7 +410,7 @@ local function setHexMemory(libname, offset, hex)
 
  if type(res) ~= 'string' then
 
-  return true
+  return trueo
 
  else
 
@@ -491,7 +491,7 @@ local function setHexMemory(libname, offset, hex)
 
  if type(res) ~= 'string' then
 
-  return true
+  return trueo
 
  else
 
@@ -546,7 +546,7 @@ local function setHexMemory(libname, offset, hex)
  end
  local res = gg.setValues(t)
  if type(res) ~= 'string' then
-  return true
+  return trueo
  else
   gg.alert(res)
   return false
@@ -591,7 +591,7 @@ local function setHexMemory(libname, offset, hex)
  end
  local res = gg.setValues(t)
  if type(res) ~= 'string' then
-  return true
+  return trueo
  else
   gg.alert(res)
   return false
