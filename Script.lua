@@ -552,8 +552,8 @@ local function setHexMemory(libname, offset, hex)
  end
 end
 
-            setHexMemory("libil2cpp.so", 0x18A2A04, "80 01 A0 E3 1E FF 2F E1")
-           setHexMemory("libil2cpp.so", 0x18A2A08, "80 01 A0 E3 1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0x18A2A04, "80 02 A0 E3 1E FF 2F E1")
+           setHexMemory("libil2cpp.so", 0x18A2A08, "80 02 A0 E3 1E FF 2F E1")
        
             
             
