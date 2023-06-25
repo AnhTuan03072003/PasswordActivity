@@ -40,13 +40,13 @@ menu = gg.multiChoice({
 
 "👉Đổi Tên",
 
-"👉Unlock Cam Xa 3 Nấc",
+"👉Cam Xa 3 Nấc",
 
 "👉Aim Full Tướng",
 
 "👉Show Unti",
 
-"👉Unlock 120FPS",
+"👉Cam xa x1",
 "👉Bypass Report [Trận]",
 
 "Thoát"
@@ -504,7 +504,7 @@ end
 
  
  
-      setHexMemory("libil2cpp.so", 0x170458C, "00 00 A0 E3 1E FF 2F E1")
+ setHexMemory("libil2cpp.so", 0x170458C, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x171039C, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x18EF804, "00 00 A0 E3 1E FF 2F E1")
 setHexMemory("libil2cpp.so", 0x197C6D0, "00 00 A0 E3 1E FF 2F E1")
@@ -586,16 +586,12 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
-            setHexMemory("libil2cpp.so", 0xFC4D3C, "01 00 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0xFC4D40, "1E FF 2F E1")
-
-            setHexMemory("libil2cpp.so", 0xFC4E30, "01 00 A0 E3")
-
+            setHexMemory("libil2cpp.so", 0x18A2A04, "81 01 A0 E3 1E FF 2F E1")
+           setHexMemory("libil2cpp.so", 0x18A2A08, "81 01 A0 E3 1E FF 2F E1")
+       
             
             
-            
-gg.toast("Unlock FPS✅")
+gg.toast("Cam xa 1x On✅")
 
 end
 
@@ -648,8 +644,6 @@ gg.clearResults()
 gg.toast("XOÁ TỐ CÁO THÀNH CÔNG")
 
 end
-
-
 
 
 function a9()
