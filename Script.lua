@@ -562,7 +562,7 @@ gg.toast("Cam xa 1x On✅")
 
 end
 
-function a7()
+function a8()
 local n, startAddress, endAddress = nil, 0, 0
 local function name(lib)
  if n == lib then
@@ -603,7 +603,7 @@ end
        
             
             
-gg.toast("Cam xa 1x On✅")
+gg.toast("Cam xa 2x On✅")
 
 end
 
