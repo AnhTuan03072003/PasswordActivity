@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 02/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 03/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -44,7 +44,7 @@ menu = gg.multiChoice({
 
 "👉Aim Full Tướng",
 
-"👉Show Unti",
+"👉Show Unti & HP & Biến Về",
 
 "👉Cam xa x1",
 
@@ -510,8 +510,11 @@ setHexMemory("libil2cpp.so", 0x1AE7DB4, "01 00 A0 E3 1E FF 2F E1")
 
 setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3 1E FF 2F E1")
  
-gg.toast("Show Unti On✅")
+ setHexMemory("libil2cpp.so", 0x136A6F4, "1E FF 2F E1")
+ 
 
+
+gg.toast("Show Unti & HP & Biến Về On✅")
 end
 
 
