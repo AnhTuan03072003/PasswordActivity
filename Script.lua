@@ -44,7 +44,7 @@ menu = gg.multiChoice({
 
 "👉Aim Full Tướng",
 
-"👉Show Unti & HP & Biến Về",
+"👉Show Unti",
 
 "👉Cam xa x1",
 
@@ -510,11 +510,9 @@ setHexMemory("libil2cpp.so", 0x1AE7DB4, "01 00 A0 E3 1E FF 2F E1")
 
 setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3 1E FF 2F E1")
  
- setHexMemory("libil2cpp.so", 0x136A6F4, "1E FF 2F E1")
  
 
-
-gg.toast("Show Unti & HP & Biến Về On✅")
+gg.toast("Show Unti ✅")
 end
 
 
