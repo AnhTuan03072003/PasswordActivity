@@ -7,8 +7,8 @@ onan1st = gg.multiChoice({
 if onan1st == nil then
   else
 if onan1st[1] == true then BP1()end
-if onan1st[1] == true then BP2()end
-if onan1st[2] == true then EXIT()end
+if onan1st[2] == true then BP2()end
+if onan1st[3] == true then EXIT()end
 end
 PUBGMH = -1
 end
