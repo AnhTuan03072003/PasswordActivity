@@ -24,3 +24,13 @@ Modify(Read('libanogs.so:bss','rw-p')+0x6c8,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x1948,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
 gg.setValues(Table)
+
+function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
+
+
+so=gg.getRangesList('libanogs.so')[1].start 
+py=0x5093A8 setvalue(so+py,4,4096)
+py=0x509638 setvalue(so+py,4,4096)
+py=0x5096C8 setvalue(so+py,4,4096)
+py=0x50A948 setvalue(so+py,4,4096)
+py=0x50F210 setvalue(so+py,4,4096)
