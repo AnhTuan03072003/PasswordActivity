@@ -38,11 +38,6 @@ setvalue(so + "0x3D6A96", 4, "h 00 00 00 00")
 setvalue(so + "0x3D6A7F", 4, "h 00 00 00 00")
 
 
-
-
-gg.getResults(9999)
-gg.editAll(101384192, gg.TYPE_DWORD, true, SIGN_EQUAL, 0,-1)
-gg.clearResults(9999)
 gg.setVisible(true)
 
 
