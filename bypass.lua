@@ -1,3 +1,4 @@
+gg.alert("Hello")
 local Ranges=gg.getRangesList('/')
 local function Read(module,type)
     for k,v in pairs(Ranges) do
