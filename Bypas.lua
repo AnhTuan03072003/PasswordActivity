@@ -7,11 +7,16 @@ py=0x509638 setvalue(so+py,4,4096)
 py=0x5096C8 setvalue(so+py,4,4096)
 py=0x50A948 setvalue(so+py,4,4096)
 py=0x50F210 setvalue(so+py,4,4096)
-setvalue(so + "0xACA12", 4, "h 00 20 70 47")--Crash Fix
-setvalue(so + "0x27B236", 4, "h 00 20 70 47")--Crash Fix
 
 
-gg.isVisible(false)
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
+so=gg.getRangesList('libanogs.so')[1].start
+setvalue(so + "0x14EED8 ", 4, "h C0 03 5F D6")--Crash Fix
+setvalue(so + "0x349F1C ", 4, "h C0 03 5F D6")--Crash Fix
+
+
+
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 so=gg.getRangesList('libanogs.so')[1].start
 
@@ -40,8 +45,6 @@ setvalue(so + "0x364068", 4, "h 00 00 00 00")
 setvalue(so + "0x3D6A92", 4, "h 00 00 00 00")
 setvalue(so + "0x3D6A96", 4, "h 00 00 00 00")
 setvalue(so + "0x3D6A7F", 4, "h 00 00 00 00")
-
-
 
 
 
