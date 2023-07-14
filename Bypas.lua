@@ -13,8 +13,6 @@ gg.isVisible(false)
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 so=gg.getRangesList('libanogs.so')[1].start
 
-setvalue(so + 0x4ACE4C, 32, "h6C 6F 6F 70")
-
 setvalue(so + "0xCB46C", 4, "h 00 00 00 00")
 setvalue(so + "0xCB470", 4, "h 00 00 00 00")
 setvalue(so + "0xCB474", 4, "h 00 00 00 00")
