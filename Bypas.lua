@@ -1,20 +1,3 @@
-function HOME()
-onan1st = gg.multiChoice({
-" CRASH FIX ",
-" BYPASS ", 
-"  EXIT "
-}, nil, (os.date("SANSERO CRASH FIX VPHONE \n CRASH FIX 64 / 32 \n┗⊳🔲 • %A, %d %B %Y %H:%M%p  ")))
-if onan1st == nil then
-  else
-if onan1st[1] == true then BP1()end
-if onan1st[2] == true then BP2()end
-if onan1st[3] == true then EXIT()end
-end
-PUBGMH = -1
-end
-
-function BP1()
-gg.processPause()
 local Ranges=gg.getRangesList('/')
 local function Read(module,type)
     for k,v in pairs(Ranges) do
@@ -35,6 +18,24 @@ Modify(Read('libanogs.so:bss','rw-p')+0x6c8,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x1948,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
 gg.toast('Crash Fix Done')
+function HOME()
+onan1st = gg.multiChoice({
+" CRASH FIX ",
+" BYPASS ", 
+"  EXIT "
+}, nil, (os.date("SANSERO CRASH FIX VPHONE \n CRASH FIX 64 / 32 \n┗⊳🔲 • %A, %d %B %Y %H:%M%p  ")))
+if onan1st == nil then
+  else
+if onan1st[1] == true then BP1()end
+if onan1st[2] == true then BP2()end
+if onan1st[3] == true then EXIT()end
+end
+PUBGMH = -1
+end
+
+function BP1()
+gg.processPause()
+
 gg.processResume()
 end
 
