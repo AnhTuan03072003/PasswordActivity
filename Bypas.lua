@@ -28,14 +28,13 @@ end
 
 function BP2()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-so=gg.getRangesList('libanogs.so')[1].start
-
-
+so=gg.getRangesList('libanogs.so:bss')[1].start
 
 setvalue(so + "0xCB46C", 4, "h 00 00 00 00")
 setvalue(so + "0xCB470", 4, "h 00 00 00 00")
 setvalue(so + "0xCB474", 4, "h 00 00 00 00")
 setvalue(so + "0xCB478", 4, "h 00 00 00 00")
+setvalue(so + "0x364754", 4, "h 7F 45 4C 46 FF C3 00 D1")
 
 setvalue(so + "0xCB504", 4, "h 00 00 00 00")
 setvalue(so + "0xCB508", 4, "h 00 00 00 00")
@@ -45,16 +44,9 @@ setvalue(so + "0xCB394", 4, "h 00 00 00 00")
 setvalue(so + "0xCB3DC", 4, "h 00 00 00 00")
 
 
+setvalue(so + "0x108969", "hsub_108968", "osub_108968")
 
-setvalue(so + "0x3C1A45", 4, "h 00 00 00 00")
-setvalue(so + "0x3C2CDC", 4, "h 00 00 00 00")
-setvalue(so + "0x3D6A87", 4, "h 00 00 00 00")
-setvalue(so + "0x3E66A2", 4, "h 00 00 00 00")
-setvalue(so + "0x3E66AE", 4, "h 00 00 00 00")
-setvalue(so + "0x364068", 4, "h 00 00 00 00")
-setvalue(so + "0x3D6A92", 4, "h 00 00 00 00")
-setvalue(so + "0x3D6A96", 4, "h 00 00 00 00")
-setvalue(so + "0x3D6A7F", 4, "h 00 00 00 00")
+  
 
 end
 
