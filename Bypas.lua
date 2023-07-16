@@ -34,7 +34,6 @@ setvalue(so + "0xCB46C", 4, "h 00 00 00 00")
 setvalue(so + "0xCB470", 4, "h 00 00 00 00")
 setvalue(so + "0xCB474", 4, "h 00 00 00 00")
 setvalue(so + "0xCB478", 4, "h 00 00 00 00")
-setvalue(so + "0x364754", 4, "h 00 00 00 00")
 
 setvalue(so + "0xCB504", 4, "h 00 00 00 00")
 setvalue(so + "0xCB508", 4, "h 00 00 00 00")
@@ -42,9 +41,6 @@ setvalue(so + "0xCB4A4", 4, "h 00 00 00 00")
 setvalue(so + "0xCB390", 4, "h 00 00 00 00")
 setvalue(so + "0xCB394", 4, "h 00 00 00 00")
 setvalue(so + "0xCB3DC", 4, "h 00 00 00 00")
-
-
-setvalue(so + "0x108969", "hsub_108968", "osub_108968")
 
 gg.processResume()
 end
