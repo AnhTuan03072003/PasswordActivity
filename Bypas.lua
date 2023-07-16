@@ -1,7 +1,7 @@
 
 function HOME()
 onan1st = gg.multiChoice({
-" CRASH + CHỐNG CHECK",
+" CRASH + CHỐNG CHECK [LOGO 2]",
 " BYPASS ISLAND",
 "  EXIT "
 }, nil, (os.date("👍")))
