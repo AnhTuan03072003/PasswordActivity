@@ -1,10 +1,10 @@
 
 function HOME()
 onan1st = gg.multiChoice({
-" CRASH FIX ",
-" BYPASS ", 
+" CRASH + CHỐNG CHECK",
+" BYPASS ISLAND",
 "  EXIT "
-}, nil, (os.date("SANSERO CRASH FIX VPHONE \n CRASH FIX 64 / 32 \n┗⊳🔲 • %A, %d %B %Y %H:%M%p  ")))
+}, nil, (os.date("👍")))
 if onan1st == nil then
   else
 if onan1st[1] == true then BP1()end
@@ -25,10 +25,11 @@ py=0x50A948 setvalue(so+py,4,4096)
 py=0x50F210 setvalue(so+py,4,4096)
 setvalue(so + "0x14EED8 ", 4, "h C0 03 5F D6")--Crash Fix
 setvalue(so + "0x349F1C ", 4, "h C0 03 5F D6")--Crash Fix
-gg.processResume()
-end
 
-function BP2()
+setvalue(so + "0x133180 ", 4, "h C0 03 5F D6")--Crash Fix
+setvalue(so + "0x1276A8 ", 4, "h C0 03 5F D6")--Crash Fix
+
+
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 so=gg.getRangesList('libanogs.so')[1].start
 
@@ -36,7 +37,7 @@ setvalue(so + "0xCB46C", 4, "h 00 00 00 00")
 setvalue(so + "0xCB470", 4, "h 00 00 00 00")
 setvalue(so + "0xCB474", 4, "h 00 00 00 00")
 setvalue(so + "0xCB478", 4, "h 00 00 00 00")
-setvalue(so + "0x364754", 4, "h 7F 45 4C 46 FF C3 00 D1")
+setvalue(so + "0x364754", 4, "h 00 00 00 00")
 
 setvalue(so + "0xCB504", 4, "h 00 00 00 00")
 setvalue(so + "0xCB508", 4, "h 00 00 00 00")
@@ -48,7 +49,99 @@ setvalue(so + "0xCB3DC", 4, "h 00 00 00 00")
 
 setvalue(so + "0x108969", "hsub_108968", "osub_108968")
 
-  
+gg.processResume()
+end
+
+
+
+
+function BP2()
+
+  function S_Pointer(t_So, t_Offset, _bit)
+	local function getRanges()
+		local ranges = {}
+		local t = gg.getRangesList('^/data/*.so*$')
+		for i, v in pairs(t) do
+			if v.type:sub(2, 2) == 'w' then
+				table.insert(ranges, v)
+			end
+		end
+		return ranges
+	end
+	local function Get_Address(N_So, Offset, ti_bit)
+		local ti = gg.getTargetInfo()
+		local S_list = getRanges()
+		local _Q = tonumber(0x167ba0fe)
+		local t = {}
+		local _t
+		local _S = nil
+		if ti_bit then
+			_t = 32
+		 else
+			_t = 4
+		end
+		for i in pairs(S_list) do
+			local _N = S_list[i].internalName:gsub('^.*/', '')
+			if N_So[1] == _N and N_So[2] == S_list[i].state then
+				_S = S_list[i]
+				break
+			end
+		end
+		if _S then
+			t[#t + 1] = {}
+			t[#t].address = _S.start + Offset[1]
+			t[#t].flags = _t
+			if #Offset ~= 1 then
+				for i = 2, #Offset do
+					local S = gg.getValues(t)
+					t = {}
+					for _ in pairs(S) do
+						if not ti.x64 then
+							S[_].value = S[_].value & 0xFFFFFFFF
+						end
+						t[#t + 1] = {}
+						t[#t].address = S[_].value + Offset[i]
+						t[#t].flags = _t
+					end
+				end
+			end
+			_S = t[#t].address
+			print(string.char(231,190,164,58).._Q)
+		end
+		return _S
+	end
+	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
+	return _A
+end
+
+
+
+local t = {"libUE4.so:bss", "Cb"}
+local tt = {0x29f3a0}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+local tt = {0x29f3f8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x3a8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+local tt = {0x2558}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+local tt = {0x638}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+
+local tt = {0x1948}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+local tt = {0x6210}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 67109633, freeze = true}})
+
 
 end
 
