@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 16/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 19/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -38,15 +38,7 @@ menu = gg.multiChoice({
 
 "👉Map Sáng",
 
-"👉Đổi Tên",
-
 "👉Cam Xa 3 Nấc",
-
-"👉Aim Full Tướng",
-
-"👉Show Unti",
-
-"👉Cam xa x1",
 
 "👉Bypass Report [Trận]",
 
@@ -66,13 +58,7 @@ if menu[4] == true then a4() end
 
 if menu[5] == true then a5() end
 
-if menu[6] == true then a6() end
 
-if menu[7] == true then a7() end
-
-if menu[8] == true then a8() end
-
-if menu[9] == true then a9() end
 
 end
 
@@ -91,6 +77,7 @@ gg.alert("Khi Vào Lại Game Nhớ Tắt Tường Lửa 👍\nChọn Khởi đ�
 os.exit()
 
 end
+
 
 function a2()
 
@@ -162,16 +149,9 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
-            setHexMemory("libil2cpp.so", 0xECF4F4, "01 00 A0 E3 1E FF 2F E1")
-
-            setHexMemory("libil2cpp.so", 0xECF4F8, "1E FF 2F E1 01 00 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0x1ECAF90, "01 00 A0 E3 1E FF 2F E1")
-
-            setHexMemory("libil2cpp.so", 0x1ECAF94, "1E FF 2F E1 06 60 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0x1F369F8, "06 60 A0 E3")
-
+            setHexMemory("libil2cpp.so", 0x2D37DC0, "C0 03 5F D6")
+            setHexMemory("libil2cpp.so", 0x2D39F00, "C0 03 5F D6")
+            setHexMemory("libil2cpp.so", 0x2EE2A14, "C0 03 5F D6")
             
 
             
@@ -181,6 +161,8 @@ end
 gg.toast("🔦 Đèn Pin Đã Sáng Rồi 😂")
 
 end
+
+
 
 function a3()
 
@@ -252,319 +234,21 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
-            setHexMemory("libil2cpp.so", 0xEB83C0, "01 00 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0xEB83C4, "1E FF 2F E1")
-
-            
-
-            
-
-    
-
-gg.toast("Đổi Tên On✅")
-
-end
-
-function a4()
-
-local n, startAddress, endAddress = nil, 0, 0
-
-local function name(lib)
-
- if n == lib then
-
-  return startAddress, endAddress
-
- end
-
- local ranges = gg.getRangesList(lib or 'libil2cpp.so')
-
- for i, v in ipairs(ranges) do
-
-  if v.state == "Xa" then
-
-   startAddress = v.start
-
-   endAddress = ranges[#ranges]['end']
-
-   break
-
-  end
-
- end
-
- return startAddress, endAddress
-
-end
-
-local function setHexMemory(libname, offset, hex)
-
- name(libname)
-
- local t, total = {}, 0
-
- for h in string.gmatch(hex, "%S%S") do
-
-     table.insert(t, {
-
-         address = startAddress + offset + total,
-
-         flags = gg.TYPE_BYTE,
-
-         value = h .. "r"
-
-     })
-
-     total = total + 1
-
- end
-
- local res = gg.setValues(t)
-
- if type(res) ~= 'string' then
-
-  return trueo
-
- else
-
-  gg.alert(res)
-
-  return false
-
- end
-
-end
-
-            setHexMemory("libil2cpp.so", 0xFC4160, "01 00 A0 E3 1E FF 2F E1")
-
-            setHexMemory("libil2cpp.so", 0xFC4164, "1E FF 2F E1 06 40 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0xFD2D00, "06 40 A0 E3 01 00 A0 E3")
-
-            setHexMemory("libil2cpp.so", 0xFD418C, "01 00 A0 E3 1E FF 2F E1")
-
-            setHexMemory("libil2cpp.so", 0xFD4190, "1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0x1FD16A8, "20 00 80 D2 C0 03 5F D6")
+			setHexMemory("libil2cpp.so", 0x1FDE250, "20 00 80 D2 C0 03 5F D6")
+			setHexMemory("libil2cpp.so", 0x1FDF420, "20 00 80 D2 C0 03 5F D6")
 
 gg.toast("Unlock Cam Xa On✅")
 
 end
 
 
-function a5()
 
-local n, startAddress, endAddress = nil, 0, 0
 
-local function name(lib)
 
- if n == lib then
 
-  return startAddress, endAddress
 
- end
-
- local ranges = gg.getRangesList(lib or 'libil2cpp.so')
-
- for i, v in ipairs(ranges) do
-
-  if v.state == "Xa" then
-
-   startAddress = v.start
-
-   endAddress = ranges[#ranges]['end']
-
-   break
-
-  end
-
- end
-
- return startAddress, endAddress
-
-end
-
-local function setHexMemory(libname, offset, hex)
-
- name(libname)
-
- local t, total = {}, 0
-
- for h in string.gmatch(hex, "%S%S") do
-
-     table.insert(t, {
-
-         address = startAddress + offset + total,
-
-         flags = gg.TYPE_BYTE,
-
-         value = h .. "r"
-
-     })
-
-     total = total + 1
-
- end
-
- local res = gg.setValues(t)
-
- if type(res) ~= 'string' then
-
-  return trueo
-
- else
-
-  gg.alert(res)
-
-  return false
-
- end
-
-end
-
-           setHexMemory("libil2cpp.so", 0x1D4C27C, "01 00 A0 E3")
-
-           setHexMemory("libil2cpp.so", 0x1D4C280, "1E FF 2F E1")
-
-           
-
-gg.alert("AIM FULL TƯỚNG ON\nAIM TƯỚNG KHÁC LANE CHỌN PHẠM VỊ GẦN NHẤT TRONG SETTING GAME")
-
-end
-
-
-function a6()
-
-local n, startAddress, endAddress = nil, 0, 0
-
-local function name(lib)
-
- if n == lib then
-
-  return startAddress, endAddress
-
- end
-
- local ranges = gg.getRangesList(lib or 'libil2cpp.so')
-
- for i, v in ipairs(ranges) do
-
-  if v.state == "Xa" then
-
-   startAddress = v.start
-
-   endAddress = ranges[#ranges]['end']
-
-   break
-
-  end
-
- end
-
- return startAddress, endAddress
-
-end
-
-local function setHexMemory(libname, offset, hex)
-
- name(libname)
-
- local t, total = {}, 0
-
- for h in string.gmatch(hex, "%S%S") do
-
-     table.insert(t, {
-
-         address = startAddress + offset + total,
-
-         flags = gg.TYPE_BYTE,
-
-         value = h .. "r"
-
-     })
-
-     total = total + 1
-
- end
-
- local res = gg.setValues(t)
-
- if type(res) ~= 'string' then
-
-  return trueo
-
- else
-
-  gg.alert(res)
-
-  return false
-
- end
-
-end
-
-
- 
-setHexMemory("libil2cpp.so", 0x170458C, "01 00 A0 E3 1E FF 2F E1")
-
-setHexMemory("libil2cpp.so", 0x1AE7DB4, "01 00 A0 E3 1E FF 2F E1")
-
-setHexMemory("libil2cpp.so", 0x1AE7F08, "01 00 A0 E3 1E FF 2F E1")
- 
- 
-
-gg.toast("Show Unti ✅")
-end
-
-
-function a7()
-local n, startAddress, endAddress = nil, 0, 0
-local function name(lib)
- if n == lib then
-  return startAddress, endAddress
- end
- local ranges = gg.getRangesList(lib or 'libil2cpp.so')
- for i, v in ipairs(ranges) do
-  if v.state == "Xa" then
-   startAddress = v.start
-   endAddress = ranges[#ranges]['end']
-   break
-  end
- end
- return startAddress, endAddress
-end
-local function setHexMemory(libname, offset, hex)
- name(libname)
- local t, total = {}, 0
- for h in string.gmatch(hex, "%S%S") do
-     table.insert(t, {
-         address = startAddress + offset + total,
-         flags = gg.TYPE_BYTE,
-         value = h .. "r"
-     })
-     total = total + 1
- end
- local res = gg.setValues(t)
- if type(res) ~= 'string' then
-  return trueo
- else
-  gg.alert(res)
-  return false
- end
-end
-
-            setHexMemory("libil2cpp.so", 0x18A2A04, "81 01 A0 E3 1E FF 2F E1")
-           setHexMemory("libil2cpp.so", 0x18A2A08, "81 01 A0 E3 1E FF 2F E1")
-       
-            
-            
-gg.toast("Cam xa 1x On✅")
-
-end
-
-
-
-
-function a8()
+function a4()
 
 gg.clearResults()
 
@@ -614,7 +298,7 @@ end
 
 
 
-function a9()
+function a5()
 os.exit()
 
 end
