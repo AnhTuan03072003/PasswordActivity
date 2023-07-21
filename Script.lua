@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 19/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 16/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghackk_u2626hshshe","t")
+pass("hmghackk_hdbehe6262","t")
 
 gg.alert("⚠️ CẢNH BÁO ⚠️\n👉 Vui Lòng Bật Hack Sau Khi Đã Bật Tường Lửa Và Không Tắt Đến Hết Trận\n👉 Kết Thúc Trận Chọn Thoát Trận Trong Menu\n👉 Mọi Sự Ngu Dốt Của Bạn Thì Bạn Phải Chấp Nhận")
 
@@ -39,6 +39,12 @@ menu = gg.multiChoice({
 "👉Map Sáng",
 
 "👉Cam Xa 3 Nấc",
+
+"👉Hide Name",
+
+"👉Aim",
+
+"👉Fps",
 
 "👉Bypass Report [Trận]",
 
@@ -57,6 +63,12 @@ if menu[3] == true then a3() end
 if menu[4] == true then a4() end
 
 if menu[5] == true then a5() end
+
+if menu[6] == true then a6() end
+
+if menu[7] == true then a7() end
+
+if menu[8] == true then a8() end
 
 
 
@@ -77,6 +89,7 @@ gg.alert("Khi Vào Lại Game Nhớ Tắt Tường Lửa 👍\nChọn Khởi đ�
 os.exit()
 
 end
+
 
 
 function a2()
@@ -149,10 +162,12 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
-            setHexMemory("libil2cpp.so", 0x2D37DC0, "C0 03 5F D6")
-            setHexMemory("libil2cpp.so", 0x2D39F00, "C0 03 5F D6")
-            setHexMemory("libil2cpp.so", 0x2EE2A14, "C0 03 5F D6")
-            
+            setHexMemory("libil2cpp.so", 0x1EED6CC, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0x1EED6D0, "1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0x1EEEA34, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0x1EEEA38, "1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0x20D3DD0, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0x20D3DD4, "1E FF 2F E1")
 
             
 
@@ -161,6 +176,7 @@ end
 gg.toast("🔦 Đèn Pin Đã Sáng Rồi 😂")
 
 end
+
 
 
 
@@ -234,10 +250,9 @@ local function setHexMemory(libname, offset, hex)
 
 end
 
-            setHexMemory("libil2cpp.so", 0x1FD16A8, "20 00 80 D2 C0 03 5F D6")
-			setHexMemory("libil2cpp.so", 0x1FDE250, "20 00 80 D2 C0 03 5F D6")
-			setHexMemory("libil2cpp.so", 0x1FDF420, "20 00 80 D2 C0 03 5F D6")
-
+            setHexMemory("libil2cpp.so", 0x18EC200, "81 01 A0 E3")
+			setHexMemory("libil2cpp.so", 0x18EC204, "1E FF 2F E1")
+			
 gg.toast("Unlock Cam Xa On✅")
 
 end
@@ -248,7 +263,261 @@ end
 
 
 
+
+
 function a4()
+
+local n, startAddress, endAddress = nil, 0, 0
+
+local function name(lib)
+
+ if n == lib then
+
+  return startAddress, endAddress
+
+ end
+
+ local ranges = gg.getRangesList(lib or 'libil2cpp.so')
+
+ for i, v in ipairs(ranges) do
+
+  if v.state == "Xa" then
+
+   startAddress = v.start
+
+   endAddress = ranges[#ranges]['end']
+
+   break
+
+  end
+
+ end
+
+ return startAddress, endAddress
+
+end
+
+local function setHexMemory(libname, offset, hex)
+
+ name(libname)
+
+ local t, total = {}, 0
+
+ for h in string.gmatch(hex, "%S%S") do
+
+     table.insert(t, {
+
+         address = startAddress + offset + total,
+
+         flags = gg.TYPE_BYTE,
+
+         value = h .. "r"
+
+     })
+
+     total = total + 1
+
+ end
+
+ local res = gg.setValues(t)
+
+ if type(res) ~= 'string' then
+
+  return trueo
+
+ else
+
+  gg.alert(res)
+
+  return false
+
+ end
+
+end
+
+            setHexMemory("libil2cpp.so", 0xEB8398, "00 00 A0 E3")
+			setHexMemory("libil2cpp.so", 0xEB839C, "1E FF 2F E1")
+			
+gg.toast("Hide Name On✅")
+
+end
+
+
+
+
+
+
+function a5()
+
+local n, startAddress, endAddress = nil, 0, 0
+
+local function name(lib)
+
+ if n == lib then
+
+  return startAddress, endAddress
+
+ end
+
+ local ranges = gg.getRangesList(lib or 'libil2cpp.so')
+
+ for i, v in ipairs(ranges) do
+
+  if v.state == "Xa" then
+
+   startAddress = v.start
+
+   endAddress = ranges[#ranges]['end']
+
+   break
+
+  end
+
+ end
+
+ return startAddress, endAddress
+
+end
+
+local function setHexMemory(libname, offset, hex)
+
+ name(libname)
+
+ local t, total = {}, 0
+
+ for h in string.gmatch(hex, "%S%S") do
+
+     table.insert(t, {
+
+         address = startAddress + offset + total,
+
+         flags = gg.TYPE_BYTE,
+
+         value = h .. "r"
+
+     })
+
+     total = total + 1
+
+ end
+
+ local res = gg.setValues(t)
+
+ if type(res) ~= 'string' then
+
+  return trueo
+
+ else
+
+  gg.alert(res)
+
+  return false
+
+ end
+
+end
+
+            setHexMemory("libil2cpp.so", 0x1D70AF4, "01 00 A0 E3")
+			setHexMemory("libil2cpp.so", 0x1D70AF8, "1E FF 2F E1")
+			
+gg.toast("Aim On✅")
+
+end
+
+
+function a6()
+
+local n, startAddress, endAddress = nil, 0, 0
+
+local function name(lib)
+
+ if n == lib then
+
+  return startAddress, endAddress
+
+ end
+
+ local ranges = gg.getRangesList(lib or 'libil2cpp.so')
+
+ for i, v in ipairs(ranges) do
+
+  if v.state == "Xa" then
+
+   startAddress = v.start
+
+   endAddress = ranges[#ranges]['end']
+
+   break
+
+  end
+
+ end
+
+ return startAddress, endAddress
+
+end
+
+local function setHexMemory(libname, offset, hex)
+
+ name(libname)
+
+ local t, total = {}, 0
+
+ for h in string.gmatch(hex, "%S%S") do
+
+     table.insert(t, {
+
+         address = startAddress + offset + total,
+
+         flags = gg.TYPE_BYTE,
+
+         value = h .. "r"
+
+     })
+
+     total = total + 1
+
+ end
+
+ local res = gg.setValues(t)
+
+ if type(res) ~= 'string' then
+
+  return trueo
+
+ else
+
+  gg.alert(res)
+
+  return false
+
+ end
+
+end
+
+            setHexMemory("libil2cpp.so", 0xFC4EB4, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0xFC4EB8, "1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0xFC4FA8, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0xFC4FAC, "1E FF 2F E1")
+            setHexMemory("libil2cpp.so", 0xFD3138, "01 00 A0 E3")
+            setHexMemory("libil2cpp.so", 0xFD313C, "1E FF 2F E1")
+
+            
+
+   
+
+gg.toast("Fps 60-120 ✅")
+
+end
+
+
+
+
+
+
+
+
+function a7()
 
 gg.clearResults()
 
@@ -298,7 +567,7 @@ end
 
 
 
-function a5()
+function a8()
 os.exit()
 
 end
