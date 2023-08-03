@@ -1,7 +1,28 @@
+local function pass(...)
+
+arg = {...}
+
+local pas = gg.prompt
+
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 03/08/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+
+pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
+for i = 1, #arg do
+if arg[i] .. " " ==  pas then
+return gg.alert("Nhập Key Thành Công ✅", "")
+end
+end
+while (true) do
+os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
+end 
+end
+
+pass("hmghackk_27637382828","t")
+
 function HOME()
 onan1st = gg.multiChoice({
 " CRASH + CHỐNG CHECK [LOGO 2]",
-}, nil, (os.date("👍")))
+}, nil, (os.date("")))
 if onan1st == nil then
   else
 if onan1st[1] == true then BP1()end
