@@ -55,7 +55,7 @@ Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
   gg.setValues(Table)
 
 end
-
+end
 while true do
 if gg.isVisible(true) then
 PUBGMH = 1
