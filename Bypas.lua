@@ -34,7 +34,7 @@ Modify(Read('libanogs.so:bss','rw-p')+0x1948,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
 
   gg.setValues(Table)
-
+os.exit()
 end
 
 
