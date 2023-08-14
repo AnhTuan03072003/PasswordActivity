@@ -1,4 +1,4 @@
-
+local function pass(...)
 arg = {...}
 
 local pas = gg.prompt
