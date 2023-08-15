@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 14/08/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 15/08/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghackk_WOKOsqZvoU","t")
+pass("hmghak_CP2WCM0A9J","t")
 
 gg.alert("⚠️ CẢNH BÁO ⚠️\n👉 Vui Lòng Bật Hack Sau Khi Đã Bật Tường Lửa Và Không Tắt Đến Hết Trận\n👉 Kết Thúc Trận Chọn Thoát Trận Trong Menu\n👉 Mọi Sự Ngu Dốt Của Bạn Thì Bạn Phải Chấp Nhận")
 
