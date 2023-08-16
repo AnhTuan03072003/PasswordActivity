@@ -30,7 +30,7 @@ pass("hmghackk_Q4iiDClHo0","t")
 
 function HOME()
 onan1st = gg.multiChoice({
-" CRASH + CHỐNG CHECK [LOGO 2]",
+"FIX VĂNG + CHỐNG CHECK [LOGO 2]",
 }, nil, (os.date("")))
 if onan1st == nil then
   else
