@@ -203,6 +203,39 @@ local tt = {0x638}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}}) 
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
+	so=gg.getRangesList('libgcloud.so')[1].start
+setvalue(so + "0x3909A8",4, "h 1E AC 70 11") 
+setvalue(so + "0x3909BC",4, "h 36 27 39 2D") 
+setvalue(so + "0x3909C0",4, "h 0A 64 D9 0F") 
+setvalue(so + "0x3909CC",4, "h 24 3A 2E 36") 
+setvalue(so + "0x3909D0",4, "h 0C B1 67 0A") 
+setvalue(so + "0x3909E8",4, "h 5A 69 4B 77") 
+setvalue(so + "0x3909EC",4, "h 1C 16 1A 12") 
+setvalue(so + "0x3909F8",4, "h 3C 43 E0 22") 
+setvalue(so + "0x3909FC",4, "h 12 1D 17 1B") 
+setvalue(so + "0x390A00",4, "h 0E 0B 0D 09") 
+setvalue(so + "0x390A0C",4, "h 14 C8 A9 1E") 
+setvalue(so + "0x390A28",4, "h 44 C5 3B 66") 
+setvalue(so + "0x390A30",4, "h 8B 76 29 43") 
+setvalue(so + "0x390A34",4, "h CB DC C6 23") 
+setvalue(so + "0x390A40",4, "h D7 CA DC 31") 
+setvalue(so + "0x390A44",4, "h 42 10 85 63") 
+setvalue(so + "0x390A50",4, "h 85 7D 24 4A") 
+setvalue(so + "0x390A5C",4, "h C7 6D A1 29") 
+setvalue(so + "0x390A74",4, "h A9 99 B9 70") 
+setvalue(so + "0x390A88",4, "h 56 D8 2C 7D") 
+setvalue(so + "0x390A8C",4, "h 22 EF 90 33") 
+setvalue(so + "0x390A90",4, "h 87 C7 4E 49") 
+setvalue(so + "0x390A94",4, "h D9 C1 D1 38") 
+setvalue(so + "0x390AA4",4, "h A5 28 DE 7A") 
+setvalue(so + "0x390AB0",4, "h 2C E4 9D 3A") 
+setvalue(so + "0x390AB4",4, "h 50 0D 92 78") 
+setvalue(so + "0x390AB8",4, "h 6A 9B CC 5F") 
+setvalue(so + "0x390AC8",4, "h 2E 5E F7 39") 
+
+
+	
   os.exit()
 end
 
