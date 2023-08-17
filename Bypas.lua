@@ -234,8 +234,9 @@ setvalue(so + "0x390AB4",4, "h 50 0D 92 78")
 setvalue(so + "0x390AB8",4, "h 6A 9B CC 5F") 
 setvalue(so + "0x390AC8",4, "h 2E 5E F7 39") 
 
+	so=gg.getRangesList('libanogs.so')[1].start
 
-	
+	setvalue(so + "0xAAB5C",4, "hsub_AAB5C, osub_AAB5C") 
   os.exit()
 end
 
