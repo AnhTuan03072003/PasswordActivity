@@ -63,6 +63,12 @@ Modify(Read('libanogs.so:bss','rw-p')+0x1948,4096,4)
 Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
 
   gg.setValues(Table)
+	
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+so=gg.getRangesList('libanogs.so')[1].start
+setvalue(so + "0x107360",32, "h 00 00 B0 E3 1E FF 2F E1")
+
+gg.exit()
 
 					
 end
