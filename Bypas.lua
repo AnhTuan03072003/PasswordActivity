@@ -1,7 +1,7 @@
 
 function HOME()
 onan1st = gg.multiChoice({
-"FIX VĂNG + CHỐNG CHECK [LOGO 1st]",
+"FIX VĂNG + CHỐNG CHECK [LOGO TENCENT]",
 }, nil, (os.date("")))
 if onan1st == nil then
   else
