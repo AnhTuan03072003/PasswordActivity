@@ -34,7 +34,7 @@ Modify(Read('libanogs.so:bss','rw-p')+0x6210,2,4)
 
   gg.setValues(Table)
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
--setvalue(gg.getRangesList('libUE4.so')[1].start+0x143046C,4,0)
+setvalue(gg.getRangesList('libUE4.so')[1].start+0x143046C,4,0)
 
 os.exit()
 end
