@@ -1,16 +1,24 @@
+local function pass(...)
 
-function HOME()
-onan1st = gg.multiChoice({
-"FIX VĂNG + CHỐNG CHECK [LOGO KRAFTON]",
-}, nil, (os.date("")))
-if onan1st == nil then
-  else
-if onan1st[1] == true then BP1()end
+arg = {...}
+
+local pas = gg.prompt
+
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 06/09/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+
+pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
+for i = 1, #arg do
+if arg[i] .. " " ==  pas then
+return gg.alert("Nhập Key Thành Công ✅", "")
 end
-PUBGMH = -1
+end
+while (true) do
+os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
+end 
 end
 
-function BP1()
+pass("hmghackk_1Ix9z9Iec3","t")
+
 
 function S_Pointer(t_So, t_Offset, _bit)
 	local function getRanges()
@@ -82,20 +90,11 @@ local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 os.exit()
-end
 
 
 
 
 
 
-while true do
-if gg.isVisible(true) then
-PUBGMH = 1
-gg.setVisible(false)
-end
-if PUBGMH == 1 then
-HOME()
-end
-end
- 
+
+
