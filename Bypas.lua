@@ -4,12 +4,12 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 07/09/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 07/09/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 39K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 for i = 1, #arg do
 if arg[i] .. " " ==  pas then
-return gg.alert("Nhập Key Thành Công ✅\nĐợi Logo Krafton", "")
+return gg.alert("Nhập Key Thành Công ✅", "")
 end
 end
 while (true) do
