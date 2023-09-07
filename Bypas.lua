@@ -9,7 +9,7 @@ local pas = gg.prompt
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 for i = 1, #arg do
 if arg[i] .. " " ==  pas then
-return gg.alert("Nhập Key Thành Công ✅", "")
+return gg.alert("Nhập Key Thành Công ✅\nĐợi Logo Krafton", "")
 end
 end
 while (true) do
