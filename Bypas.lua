@@ -1,3 +1,33 @@
+local function pass(...)
+
+arg = {...}
+
+local pas = gg.prompt
+
+({"🔑 KEY ĐƯỢC CẬP NHẬT LÚC: 19/07/2023 | 12H TRƯA MỖI NGÀY RESET KEY\n⚠️ VUI LÒNG XEM VIDEO HƯỚNG DẪN TRƯỚC KHI DÙNG\n👉 20K/1 THÁNG FREE KEY IB ADMIN TELEGRAM"}, {},{"text"})
+
+pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
+
+for i = 1, #arg do
+
+if arg[i] .. " " ==  pas then
+
+return gg.alert("Nhập Key Thành Công ✅", "")
+
+end
+
+end
+
+while (true) do
+
+os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
+
+end 
+
+end
+
+pass("hmghackk_hdbehe6262","t")
+
 
 
     local Ranges=gg.getRangesList('/')
@@ -133,7 +163,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "➥Logo 1st 🔱\n --- Aᴘᴘʟʏ ɪɴ Logo",
-"➥Lobby Bypass 🔱\n --- Aᴘᴘʟʏ ɪɴ Lobby",
+"➥Lobby [Sảnh Chờ]🔱\n --- Aᴘᴘʟʏ ɪɴ Lobby",
 "🔥 Exɪᴛ 🔥"
 
 }, nil, "📍 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak")
@@ -178,6 +208,7 @@ setvalue(so+0XC2C,4,-763363328)
 
 
 gg.alert("\n☣️  𝐁𝐲𝐩𝐚𝐬𝐬 Lobby 𝐃𝐨𝐧𝐞 √\n☣️  𝐏𝐥𝐚𝐲 𝐬𝐚𝐟𝐞, 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐨𝐫𝐭 𝐝𝐨𝐧'𝐭 𝐛𝐫𝐮𝐭𝐚𝐥\n☣️  𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @hmghak")
+os.exit()
 end
 
 
