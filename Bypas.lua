@@ -162,11 +162,11 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"➥Logo 1st 🔱\n --- Aᴘᴘʟʏ ɪɴ Logo",
-"➥Lobby [Sảnh Chờ]🔱\n --- Aᴘᴘʟʏ ɪɴ Lobby",
+"➥Logo 1st 🛡️\n --- Aᴘᴘʟʏ ɪɴ Logo",
+"➥Lobby [Sảnh Chờ] 🛡️\n --- Aᴘᴘʟʏ ɪɴ Lobby",
 "🔥 Exɪᴛ 🔥"
 
-}, nil, "📍 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak")
+}, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
