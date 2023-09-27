@@ -205,7 +205,45 @@ setvalue(so+0x9A5C,4,-763363328)
 so=gg.getRangesList('libswappy.so')[1].start
 setvalue(so+0XC2C,4,-763363328)
 
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x3FE4}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 3584, freeze = true}})
 
+local t = {"libswappy.so", "Cd"}
+local tt = {0xab0}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
+
+local t = {"libswappy.so", "Cd"}
+local tt = {0xc90}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
+
+local t = {"libswappy.so", "Cd"}
+local tt = {0xcc8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
+
+local t = {"libswappy.so", "Cd"}
+local tt = {0xce0}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
+
+local t = {"libswappy.so", "Cd"}
+local tt = {0xe14}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
+
+local t = {"libswappy.so", "Cd"}
+local tt = {0xe5c}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 0, freeze = true}})
+
+local t = {"libanort.so", "Cd"}
+local tt = {0x20afc}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 177777, freeze = true}})-
 
 gg.alert("\n☣️  𝐁𝐲𝐩𝐚𝐬𝐬 Lobby 𝐃𝐨𝐧𝐞 √\n☣️  𝐏𝐥𝐚𝐲 𝐬𝐚𝐟𝐞, 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐨𝐫𝐭 𝐝𝐨𝐧'𝐭 𝐛𝐫𝐮𝐭𝐚𝐥\n☣️  𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @hmghak")
 os.exit()
