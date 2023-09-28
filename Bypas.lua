@@ -183,12 +183,12 @@ gg.setValues(Table)
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})--防闪退
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x6B8}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})--防86
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
 
