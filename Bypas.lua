@@ -248,7 +248,7 @@ gg.addListItems({{address = ttt, flags = 4, value = 0, freeze = true}})
 local t = {"libanort.so", "Cd"}
 local tt = {0x20afc}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 177777, freeze = true}})-
+gg.addListItems({{address = ttt, flags = 4, value = 177777, freeze = true}})
 
 gg.alert("\n☣️  𝐁𝐲𝐩𝐚𝐬𝐬 Lobby 𝐃𝐨𝐧𝐞 √\n☣️  𝐏𝐥𝐚𝐲 𝐬𝐚𝐟𝐞, 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐨𝐫𝐭 𝐝𝐨𝐧'𝐭 𝐛𝐫𝐮𝐭𝐚𝐥\n☣️  𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @hmghak")
 os.exit()
