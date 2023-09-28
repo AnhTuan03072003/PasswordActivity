@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"KHÔNG BẮN BOT - DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN"}, {},{"text"})
+({"KHÔNG BẮN BOT - DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nKHÔNG THOÁT APP ANTIBAN"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -12,7 +12,7 @@ for i = 1, #arg do
 
 if arg[i] .. " " ==  pas then
 
-return gg.alert("Nhập Key Thành Công ✅", "")
+return gg.toast("Nhập Key Thành Công ✅")
 
 end
 
@@ -159,19 +159,19 @@ end
 
 
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"➥Logo 1st 🛡️\n --- Aᴘᴘʟʏ ɪɴ Logo",
-"➥Lobby [Sảnh Chờ] 🛡️\n --- Aᴘᴘʟʏ ɪɴ Lobby",
-"🔥 Exɪᴛ 🔥"
+"➥Logo 1st 🛡",
+"➥Lobby [Sảnh Chờ] 🛡",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
 if VIPONLY[2]== true then B2() end
-if VIPONLY[3]== true then EXIT() end
 end
 PUBGMH = -1
 end
@@ -193,7 +193,7 @@ gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
 
-gg.alert("\n☣️  𝐁𝐲𝐩𝐚𝐬𝐬 Logo 𝐃𝐨𝐧𝐞 √\n☣️  𝐏𝐥𝐚𝐲 𝐬𝐚𝐟𝐞, 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐨𝐫𝐭 𝐝𝐨𝐧'𝐭 𝐛𝐫𝐮𝐭𝐚𝐥\n☣️  𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @hmghak")
+gg.alert("Bypass Logo 1st Done √")
 end
 
 function B2()
@@ -250,17 +250,12 @@ local tt = {0x20afc}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 177777, freeze = true}})
 
-gg.alert("\n☣️  𝐁𝐲𝐩𝐚𝐬𝐬 Lobby 𝐃𝐨𝐧𝐞 √\n☣️  𝐏𝐥𝐚𝐲 𝐬𝐚𝐟𝐞, 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐨𝐫𝐭 𝐝𝐨𝐧'𝐭 𝐛𝐫𝐮𝐭𝐚𝐥\n☣️  𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @hmghak")
+gg.alert("Bypass Lobby Done √")
 os.exit()
 end
 
 
-function EXIT()
-print("┣➤[ Telegram : @hmghak]")
-gg.skipRestoreState()
-gg.setVisible(true)
-os.exit()
-end
+
 while true do
 if gg.isVisible(true) then
 PUBGMH = 1
