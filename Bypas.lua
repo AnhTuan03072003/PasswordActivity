@@ -4,7 +4,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"KHÔNG BẮN BOT - DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nKHÔNG THOÁT APP ANTIBAN"}, {},{"text"})
+({"KHÔNG BẮN BOT - DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nKHÔNG THOÁT APP ANTIBAN\n🚫 Không dùng Memory"}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
