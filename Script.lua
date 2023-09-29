@@ -12,7 +12,7 @@ for i = 1, #arg do
 
 if arg[i] .. " " ==  pas then
 
-return gg.alert("Nhập Key Thành Công ✅", "")
+return gg.toast("Nhập Key Thành Công ✅")
 
 end
 
@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghackk_Zj8BAIsytM","t")
+pass("hmghackk_OPC5nyGeUe","t")
 
 gg.alert("⚠️ CẢNH BÁO ⚠️\n👉 Vui Lòng Bật Hack Sau Khi Đã Bật Tường Lửa Và Không Tắt Đến Hết Trận\n👉 Kết Thúc Trận Chọn Thoát Trận Trong Menu\n👉 Mọi Sự Ngu Dốt Của Bạn Thì Bạn Phải Chấp Nhận")
 
