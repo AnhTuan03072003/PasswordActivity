@@ -177,8 +177,13 @@ PUBGMH = -1
 end
 
 function B1()
-Modify(Read('libanogs.so','r-xp')+0x4E1F78,0,4)
-gg.setValues(Table)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x3F17E0
+setvalue(so+py,4,0)--防异常
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x3F17DC
+setvalue(so+py,4,536879165)--杀67
+
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x628}
@@ -192,11 +197,73 @@ gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
 
-
 gg.alert("Bypass Logo 1st Done √")
 end
 
 function B2()
+
+
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x21fa00
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x21faf0
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x2203c0
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x220710
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x220a70
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x220bd0
+setvalue(so+py,4,1384120329)
+so=gg.getRangesList("libanogs.so")[1].start
+py=0x220be0
+setvalue(so+py,4,1384120329)
+
+so=gg.getRangesList('libUE4.so:bss')[1].start
+setvalue(so + 0x43258, 4, "64")
+setvalue(so + 0x4325c, 4, "64")
+setvalue(so + 0x43260, 4, "64")
+setvalue(so + 0x43264, 4, "64")
+setvalue(so + 0x43268, 4, "64")
+setvalue(so + 0x4326c, 4, "64")
+setvalue(so + 0x43270, 4, "64")
+setvalue(so + 0x43274, 4, "64")
+setvalue(so + 0x450594, 4, "64")
+setvalue(so + 0x4505a4, 4, "64")
+setvalue(so + 0x4505e0, 4, "64")
+setvalue(so + 0x4505e4, 4, "64")
+setvalue(so + 0x4505e8, 4, "64")
+setvalue(so + 0x4505ec, 4, "64")
+setvalue(so + 0x4505f0, 4, "64")
+setvalue(so + 0x4505f4, 4, "64")
+setvalue(so + 0x4505f8, 4, "64")
+setvalue(so + 0x4505fc, 4, "64")
+
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1C74}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 17024}})
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1CAC}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 17024}})
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x2448}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 17024}})
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x2470}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 17024}})
+
+
 so=gg.getRangesList('libUE4.so')[1].start
 setvalue(so+0x421EB0,4,-763363328)
 setvalue(so+0x651480,4,-763363328)
@@ -210,49 +277,11 @@ setvalue(so+0x9A5C,4,-763363328)
 so=gg.getRangesList('libswappy.so')[1].start
 setvalue(so+0XC2C,4,-763363328)
 
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x3FE4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 3584, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xab0}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xc90}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xcc8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xce0}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xe14}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 257, freeze = true}})
-
-local t = {"libswappy.so", "Cd"}
-local tt = {0xe5c}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 0, freeze = true}})
-
-local t = {"libanort.so", "Cd"}
-local tt = {0x20afc}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 177777, freeze = true}})
 
 gg.alert("Bypass Lobby Done √")
 os.exit()
 end
+
 
 
 
