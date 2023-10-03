@@ -30,6 +30,13 @@ pass("hmghackk_c8bqsxjsTh","t")
 
 
 
+    
+
+
+
+
+
+
     local Ranges=gg.getRangesList('/')
 local function Read(module,type)
     for k,v in pairs(Ranges) do
@@ -177,21 +184,13 @@ PUBGMH = -1
 end
 
 function B1()
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x3F17E0
-setvalue(so+py,4,0)--防异常
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x3F17DC
-setvalue(so+py,4,536879165)--杀67
 
+
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x628}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x6B8}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
@@ -203,80 +202,59 @@ end
 function B2()
 
 
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x21fa00
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x21faf0
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x2203c0
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x220710
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x220a70
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x220bd0
-setvalue(so+py,4,1384120329)
-so=gg.getRangesList("libanogs.so")[1].start
-py=0x220be0
-setvalue(so+py,4,1384120329)
-
-so=gg.getRangesList('libUE4.so:bss')[1].start
-setvalue(so + 0x43258, 4, "64")
-setvalue(so + 0x4325c, 4, "64")
-setvalue(so + 0x43260, 4, "64")
-setvalue(so + 0x43264, 4, "64")
-setvalue(so + 0x43268, 4, "64")
-setvalue(so + 0x4326c, 4, "64")
-setvalue(so + 0x43270, 4, "64")
-setvalue(so + 0x43274, 4, "64")
-setvalue(so + 0x450594, 4, "64")
-setvalue(so + 0x4505a4, 4, "64")
-setvalue(so + 0x4505e0, 4, "64")
-setvalue(so + 0x4505e4, 4, "64")
-setvalue(so + 0x4505e8, 4, "64")
-setvalue(so + 0x4505ec, 4, "64")
-setvalue(so + 0x4505f0, 4, "64")
-setvalue(so + 0x4505f4, 4, "64")
-setvalue(so + 0x4505f8, 4, "64")
-setvalue(so + 0x4505fc, 4, "64")
+function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end
 
 
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1C74}
-local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 17024}})
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1CAC}
-local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 17024}})
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x2448}
-local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 17024}})
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x2470}
-local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 17024}})
 
 
-so=gg.getRangesList('libUE4.so')[1].start
-setvalue(so+0x421EB0,4,-763363328)
-setvalue(so+0x651480,4,-763363328)
-setvalue(so+0x6E9458,4,-763363328)
-setvalue(so+0x760490,4,-763363328)
-setvalue(so+0x7895A0,4,-763363328)
-setvalue(so+0x7B1D98,4,-763363328)
-setvalue(so+0x11C1210,4,-763363328)
-setvalue(so+0x9A5C,4,-763363328)
 
-so=gg.getRangesList('libswappy.so')[1].start
-setvalue(so+0XC2C,4,-763363328)
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3c44f4",4,"-698416192")
+setvalue(so+"0x3c4538",4,"-698416192")
+setvalue(so+"0x3c44ec",4,"-698416192")
+setvalue(so+"0x3c4548",4,"-698416192")
+setvalue(so+"0x3d700c",4,"-698416192")
+setvalue(so+"0x3d7048",4,"-698416192")
 
+
+
+so=gg.getRangesList("libUE4.so")[1].start
+setvalue(so+" 0x377e498",4,"-698416192")
+setvalue(so+" 0x377e49c",4,"-698416192")
+setvalue(so+" 0x377e4a8",4,"-698416192")
+setvalue(so+" 0x377e4ac",4,"-698416192")
+setvalue(so+" 0x377e4b0",4,"-698416192")
+setvalue(so+" 0x377e4b4",4,"-698416192")
+setvalue(so+" 0x377e4b8",4,"-698416192")
+setvalue(so+" 0x377e4bc",4,"-698416192")
+setvalue(so+" 0x377e4c0",4,"-698416192")
+setvalue(so+" 0xc8e784",4,"-698416192")
+
+so=gg.getRangesList("libgcloud.so")[1].start
+setvalue(so+" 0x46d7e0",4,"-698416192")
+setvalue(so+" 0x46d7e4",4,"-698416192")
+setvalue(so+" 0x46d7f0",4,"-698416192")
+setvalue(so+" 0x46d7f8",4,"-698416192")
+setvalue(so+" 0x46d7fc",4,"-698416192")
+setvalue(so+" 0x46d804",4,"-698416192")
+setvalue(so+" 0x46d808",4,"-698416192")
+setvalue(so+" 0x4187dc",4,"-698416192")
+setvalue(so+" 0x4187e0",4,"-698416192")
+setvalue(so+" 0x4187e8",4,"-698416192")
+setvalue(so+" 0x4187ec",4,"-698416192")
+so=gg.getRangesList("libanort.so")[1].start
+setvalue(so+" 0x1501c8",4,"-698416192")
+setvalue(so+" 0x1501e0",4,"-698416192")
+setvalue(so+" 0x1501e4",4,"-698416192")
+so=gg.getRangesList("libPandoraVideo.so")[1].start
+setvalue(so+" 0x4224",4,"-698416192")
+setvalue(so+" 0x4238",4,"-698416192")
+setvalue(so+" 0x423c",4,"-698416192")
+setvalue(so+" 0x4240",4,"-698416192")
+so=gg.getRangesList("libTDataMaster.so")[1].start
+setvalue(so+" 0x4928",4,"-698416192")
+setvalue(so+" 0x4974",4,"-698416192")
+setvalue(so+" 0x49ac",4,"-698416192")
 
 gg.alert("Bypass Lobby Done √")
 os.exit()
