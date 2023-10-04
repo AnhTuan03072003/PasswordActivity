@@ -30,12 +30,8 @@ pass("hmghackk_LgJZefZ5Yw","t")
 
 
 
-    
 
-
-
-
-
+   
 
     local Ranges=gg.getRangesList('/')
 local function Read(module,type)
@@ -194,6 +190,12 @@ local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3E0",4,"0")
+so=gg.getRangesList("libUE4.so")[1].start
+setvalue(so+"0x3E0",4,"0")
+
+
 
 
 gg.alert("Bypass Logo 1st Done √")
@@ -242,6 +244,7 @@ setvalue(so+" 0x4187dc",4,"-698416192")
 setvalue(so+" 0x4187e0",4,"-698416192")
 setvalue(so+" 0x4187e8",4,"-698416192")
 setvalue(so+" 0x4187ec",4,"-698416192")
+
 so=gg.getRangesList("libanort.so")[1].start
 setvalue(so+" 0x1501c8",4,"-698416192")
 setvalue(so+" 0x1501e0",4,"-698416192")
@@ -255,6 +258,107 @@ so=gg.getRangesList("libTDataMaster.so")[1].start
 setvalue(so+" 0x4928",4,"-698416192")
 setvalue(so+" 0x4974",4,"-698416192")
 setvalue(so+" 0x49ac",4,"-698416192")
+
+
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x17b5bc",4,"-698416192")
+setvalue(so+"0x17b680",4,"-698416192")
+setvalue(so+"0x17b7ec",4,"-698416192")
+setvalue(so+"0x17b840",4,"-698416192")
+setvalue(so+"0x17baec",4,"-698416192")
+setvalue(so+"0x17bf10",4,"-698416192")
+setvalue(so+"0x17c108",4,"-698416192")
+setvalue(so+"0x17c180",4,"-698416192")
+setvalue(so+"0x17c1e0",4,"-698416192")
+setvalue(so+"0x17c23c",4,"-698416192")
+setvalue(so+"0x17c638",4,"-698416192")
+setvalue(so+"0x17c6c8",4,"-698416192")
+setvalue(so+"0x17cb0c",4,"-698416192")
+setvalue(so+"0x17cba0",4,"-698416192")
+setvalue(so+"0x17cbc8",4,"-698416192")
+setvalue(so+"0x17cbf4",4,"-698416192")
+setvalue(so+"0x17cc94",4,"-698416192")
+setvalue(so+"0x17ce04",4,"-698416192")
+setvalue(so+"0x17ce4c",4,"-698416192")
+setvalue(so+"0x17ce78",4,"-698416192")
+setvalue(so+"0x17cf24",4,"-698416192")
+setvalue(so+"0x17cf6c",4,"-698416192")
+setvalue(so+"0x17cf98",4,"-698416192")
+setvalue(so+"0x1d97d8",4,"-698416192")
+setvalue(so+"0x1d9800",4,"-698416192")
+setvalue(so+"0x1da188",4,"-698416192")
+setvalue(so+"0x1da1b0",4,"-698416192")
+setvalue(so+"0x1da340",4,"-698416192")
+setvalue(so+"0x1daa4c",4,"-698416192")
+setvalue(so+"0x1daa64",4,"-698416192")
+setvalue(so+"0x1daa78",4,"-698416192")
+setvalue(so+"0x1daad8",4,"-698416192")
+setvalue(so+"0x1daaec",4,"-698416192")
+setvalue(so+"0x1dab4c",4,"-698416192")
+setvalue(so+"0x1dab60",4,"-698416192")
+setvalue(so+"0x3c3000",4,"-698,416,192")
+setvalue(so+"0x3c3008",4,"-698,416,192")
+setvalue(so+"0x3c30c2",4,"-698,416,192")
+setvalue(so+"0x3c30d4",4,"-698,416,192")
+setvalue(so+"0x3c3144",4,"-698,416,192")
+setvalue(so+"0x3c3450",4,"-698,416,192")
+setvalue(so+"0x3c38f8",4,"-698,416,192")
+setvalue(so+"0x3c44ac",4,"-698,416,192")
+setvalue(so+"0x3c4538",4,"-698,416,192")
+setvalue(so+"0x3c453c",4,"-698,416,192")
+setvalue(so+"0x3c4548",4,"-698,416,192")
+setvalue(so+"0x3c457c",4,"-698,416,192")
+setvalue(so+"0x3c458c",4,"-698,416,192")
+setvalue(so+"0x3c459c",4,"-698,416,192")
+setvalue(so+"0x3c45ac",4,"-698,416,192")
+setvalue(so+"0x3c45b8",4,"-698,416,192")
+setvalue(so+"0x3c45bc",4,"-698,416,192")
+setvalue(so+"0x3c45c4",4,"-698,416,192")
+setvalue(so+"0x3c45d0",4,"-698,416,192")
+setvalue(so+"0x3c45e0",4,"-698,416,192")
+setvalue(so+"0x3c45f0",4,"-698,416,192")
+setvalue(so+"0x3c4604",4,"-698,416,192")
+setvalue(so+"0x3c4608",4,"-698,416,192")
+setvalue(so+"0x3c460c",4,"-698,416,192")
+setvalue(so+"0x3c4614",4,"-698,416,192")
+setvalue(so+"0x3c4618",4,"-698,416,192")
+setvalue(so+"0x3c461c",4,"-698,416,192")
+setvalue(so+"0x3c4620",4,"-698,416,192")
+setvalue(so+"0x1d94e0",4,"0")
+setvalue(so+"0x1d9568",4,"0")
+setvalue(so+"0x1d9594",4,"0")
+setvalue(so+"0x1d960c",4,"0")
+setvalue(so+"0x1da454",4,"0")
+setvalue(so+"0x1da4d8",4,"0")
+setvalue(so+"0x1da9e4",4,"0")
+setvalue(so+"0x1daa04",4,"0")
+setvalue(so+"0x1daa84",4,"0")
+setvalue(so+"0x1daaa4",4,"0")
+setvalue(so+"0x1daaf8",4,"0")
+setvalue(so+"0x1dab18",4,"0")
+setvalue(so+"0x1dab6c",4,"0")
+setvalue(so+"0x1dace4",4,"0")
+setvalue(so+"0x1dae5c",4,"0")
+setvalue(so+"0x1daf6c",4,"0")
+
+
+so=gg.getRangesList("libUE4.so")[1].start
+setvalue(so+"0x37cf13c",4,"-698416192")
+setvalue(so+"0x37cf140",4,"-698416192")
+setvalue(so+"0x37cf144",4,"-698416192")
+setvalue(so+"0x37cf148",4,"-698416192")
+setvalue(so+"0x37cf150",4,"-698416192")
+setvalue(so+"0x37cf158",4,"-698416192")
+setvalue(so+"0x37cf15c",4,"-698416192")
+setvalue(so+"0x37cf160",4,"-698416192")
+setvalue(so+"0x37cf164",4,"-698416192")
+setvalue(so+"0x37cf168",4,"-698416192")
+setvalue(so+"0x37cf16c",4,"-698416192")
+setvalue(so+"0x37cf170",4,"-698416192")
+setvalue(so+"0x37cf178",4,"-698416192")
+setvalue(so+"0x3779a98",4,"-698416192")
+setvalue(so+"0x3a10870",4,"-698416192")
+
 
 gg.alert("Bypass Lobby Done √")
 os.exit()
