@@ -359,6 +359,19 @@ setvalue(so+"0x37cf178",4,"-698416192")
 setvalue(so+"0x3779a98",4,"-698416192")
 setvalue(so+"0x3a10870",4,"-698416192")
 
+so=gg.getRangesList("libUE4.so")[1].start
+setvalue(so+"0x3779a98",4,"-698416192")
+setvalue(so+"0x3a10870",4,"-698416192")
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3c4644",4,"-698416192")
+setvalue(so+"0x3c464c",4,"-698416192")
+setvalue(so+"0x3c4650",4,"-698416192")
+setvalue(so+"0x3c4654",4,"-698416192")
+setvalue(so+"0x3c4658",4,"-698416192")
+setvalue(so+"0x3c465c",4,"-698416192")
+setvalue(so+"0x3c4660",4,"-698416192")
+setvalue(so+"0x3c4680",4,"-698416192")
+setvalue(so+"0x3c4684",4,"-698416192")
 
 gg.alert("Bypass Lobby Done √\nNO TERMINATION BAN\nNO OBSERVATION BANS\nNO 10 YEAR BANS\nNO ANY KIND OF BANS\nNO CRASH NO PING ISSUS")
 os.exit()
