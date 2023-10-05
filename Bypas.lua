@@ -360,7 +360,7 @@ setvalue(so+"0x3779a98",4,"-698416192")
 setvalue(so+"0x3a10870",4,"-698416192")
 
 
-gg.alert("Bypass Lobby Done √")
+gg.alert("Bypass Lobby Done √\nNO TERMINATION BAN\nNO OBSERVATION BANS\nNO 10 YEAR BANS\nNO ANY KIND OF BANS\nNO CRASH NO PING ISSUS")
 os.exit()
 end
 
