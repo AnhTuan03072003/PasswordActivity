@@ -31,9 +31,13 @@ pass("hmghackk_irDwdm7y1M","t")
 
 
 
-   
 
-    local Ranges=gg.getRangesList('/')
+
+
+
+
+
+local Ranges=gg.getRangesList('/')
 local function Read(module,type)
     for k,v in pairs(Ranges) do
         if v['internalName']:match('[^/]*$')==module and v['type']==type then
@@ -189,6 +193,13 @@ local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x6B8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+
 
 so=gg.getRangesList("libanogs.so")[1].start
 setvalue(so+"0x3E0",4,"0")
@@ -359,6 +370,7 @@ setvalue(so+"0x37cf178",4,"-698416192")
 setvalue(so+"0x3779a98",4,"-698416192")
 setvalue(so+"0x3a10870",4,"-698416192")
 
+
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x3779a98",4,"-698416192")
 setvalue(so+"0x3a10870",4,"-698416192")
@@ -372,6 +384,68 @@ setvalue(so+"0x3c465c",4,"-698416192")
 setvalue(so+"0x3c4660",4,"-698416192")
 setvalue(so+"0x3c4680",4,"-698416192")
 setvalue(so+"0x3c4684",4,"-698416192")
+
+
+
+
+so=gg.getRangesList("libUE4.so")[1].start
+setvalue(so+"0x2425870",4,"-698416192")
+setvalue(so+"0x2425874",4,"-698416192")
+setvalue(so+"0x2425878",4,"-698416192")
+setvalue(so+"0x242587c",4,"-698416192")
+setvalue(so+"0x2425880",4,"-698416192")
+setvalue(so+"0x2425884",4,"-698416192")
+setvalue(so+"0x2425888",4,"-698416192")
+setvalue(so+"0x242588c",4,"-698416192")
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3ee010",4,"-698416192")
+setvalue(so+"0x3ee028",4,"-698416192")
+setvalue(so+"0x3ee07c",4,"-698416192")
+setvalue(so+"0x3ee14c",4,"-698416192")
+setvalue(so+"0x3ee15c",4,"-698416192")
+setvalue(so+"0x3ee164",4,"-698416192")
+setvalue(so+"0x3ee184",4,"-698416192")
+setvalue(so+"0x3ee198",4,"-698416192")
+setvalue(so+"0x3ee1c0",4,"-698416192")
+setvalue(so+"0x3ee1c4",4,"-698416192")
+setvalue(so+"0x3ee1d8",4,"-698416192")
+setvalue(so+"0x3ee1dc",4,"-698416192")
+setvalue(so+"0x3ee1ec",4,"-698416192")
+setvalue(so+"0x3ee1f8",4,"-698416192")
+setvalue(so+"0x3ee1fc",4,"-698416192")
+setvalue(so+"0x3ee200",4,"-698416192")
+setvalue(so+"0x3ee244",4,"-698416192")
+setvalue(so+"0x3ee248",4,"-698416192")
+setvalue(so+"0x3ee258",4,"-698416192")
+setvalue(so+"0x3ee25c",4,"-698416192")
+setvalue(so+"0x3ee260",4,"-698416192")
+setvalue(so+"0x3ee274",4,"-698416192")
+setvalue(so+"0x3ee280",4,"-698416192")
+setvalue(so+"0x3ee284",4,"-698416192")
+setvalue(so+"0x3ee2d8",4,"-698416192")
+setvalue(so+"0x3ee2f4",4,"-698416192")
+setvalue(so+"0x3ee2fc",4,"-698416192")
+setvalue(so+"0x3ee300",4,"-698416192")
+setvalue(so+"0x3ee304",4,"-698416192")
+setvalue(so+"0x3ee308",4,"-698416192")
+setvalue(so+"0x3ee36c",4,"-698416192")
+setvalue(so+"0x3ee758",4,"-698416192")
+setvalue(so+"0x3efe98",4,"-698416192")
+setvalue(so+"0x23d4",4,"-698416192")
+setvalue(so+"0x23d8",4,"-698416192")
+setvalue(so+"0x23dc",4,"-698416192")
+setvalue(so+"0x23e0",4,"-698416192")
+setvalue(so+"0x23e4",4,"-698416192")
+setvalue(so+"0x23e8",4,"-698416192")
+
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x12F68}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = -698,416,192, freeze = true}})
+
+
+
 
 gg.alert("Bypass Lobby Done √\nNO TERMINATION BAN\nNO OBSERVATION BANS\nNO 10 YEAR BANS\nNO ANY KIND OF BANS\nNO CRASH NO PING ISSUS")
 os.exit()
