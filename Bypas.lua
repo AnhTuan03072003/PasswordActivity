@@ -439,11 +439,6 @@ setvalue(so+"0x23e4",4,"-698416192")
 setvalue(so+"0x23e8",4,"-698416192")
 
 
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x12F68}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = -698,416,192, freeze = true}})
-
 
 
 
