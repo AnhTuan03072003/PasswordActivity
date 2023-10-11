@@ -31,9 +31,7 @@ pass("hmghackk_m6ora469QE","t")
 
 
 
-
-
-
+   
 
     local Ranges=gg.getRangesList('/')
 local function Read(module,type)
@@ -217,26 +215,17 @@ gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
 so=gg.getRangesList("libanogs.so")[1].start
-setvalue(so+"0x3E0",4,"0")
+setvalue(so+"0x3E0",4,"-698416192")
 so=gg.getRangesList("libUE4.so")[1].start
-setvalue(so+"0x3E0",4,"0")
+setvalue(so+"0x3E0",4,"-698416192")
 
 so=gg.getRangesList('libUE4.so')[1].start
 py=0x230
-setvalue(so+py,4,-698416192)
+setvalue(so+py,4,"-698416192")
 so=gg.getRangesList('libUE4.so')[1].start
 py=0x189
-setvalue(so+py,4,-698416192)
+setvalue(so+py,4,"-698416192")
 
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x3C7208
-setvalue(so+py,4, 0)
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x3C8AC4
-setvalue(so+py,4, 0)
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x3CB7E8
-setvalue(so+py,4, 0)
 
 
 gg.alert("Bypass Logo 1st Done √")
@@ -353,22 +342,7 @@ setvalue(so+"0x3c4614",4,"-698,416,192")
 setvalue(so+"0x3c4618",4,"-698,416,192")
 setvalue(so+"0x3c461c",4,"-698,416,192")
 setvalue(so+"0x3c4620",4,"-698,416,192")
-setvalue(so+"0x1d94e0",4,"0")
-setvalue(so+"0x1d9568",4,"0")
-setvalue(so+"0x1d9594",4,"0")
-setvalue(so+"0x1d960c",4,"0")
-setvalue(so+"0x1da454",4,"0")
-setvalue(so+"0x1da4d8",4,"0")
-setvalue(so+"0x1da9e4",4,"0")
-setvalue(so+"0x1daa04",4,"0")
-setvalue(so+"0x1daa84",4,"0")
-setvalue(so+"0x1daaa4",4,"0")
-setvalue(so+"0x1daaf8",4,"0")
-setvalue(so+"0x1dab18",4,"0")
-setvalue(so+"0x1dab6c",4,"0")
-setvalue(so+"0x1dace4",4,"0")
-setvalue(so+"0x1dae5c",4,"0")
-setvalue(so+"0x1daf6c",4,"0")
+
 
 
 so=gg.getRangesList("libUE4.so")[1].start
