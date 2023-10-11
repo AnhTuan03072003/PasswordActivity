@@ -35,9 +35,7 @@ pass("hmghackk_m6ora469QE","t")
 
 
 
-
-
-local Ranges=gg.getRangesList('/')
+    local Ranges=gg.getRangesList('/')
 local function Read(module,type)
     for k,v in pairs(Ranges) do
         if v['internalName']:match('[^/]*$')==module and v['type']==type then
@@ -168,6 +166,23 @@ end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 
+local Ranges=gg.getRangesList('/')
+local function Read(module,type)
+    for k,v in pairs(Ranges) do
+        if v['internalName']:match('[^/]*$')==module and v['type']==type then
+            return v['start']
+        end
+    end
+end
+
+local Table={}
+local function Modify(address,value,flags)
+    Table[#Table+1]={address=address,value=value,flags=flags}
+end
+
+
+
+
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
@@ -206,7 +221,22 @@ setvalue(so+"0x3E0",4,"0")
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x3E0",4,"0")
 
+so=gg.getRangesList('libUE4.so')[1].start
+py=0x230
+setvalue(so+py,4,-698416192)
+so=gg.getRangesList('libUE4.so')[1].start
+py=0x189
+setvalue(so+py,4,-698416192)
 
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3C7208
+setvalue(so+py,4, 0)
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3C8AC4
+setvalue(so+py,4, 0)
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3CB7E8
+setvalue(so+py,4, 0)
 
 
 gg.alert("Bypass Logo 1st Done √")
@@ -243,18 +273,6 @@ setvalue(so+" 0x377e4bc",4,"-698416192")
 setvalue(so+" 0x377e4c0",4,"-698416192")
 setvalue(so+" 0xc8e784",4,"-698416192")
 
-so=gg.getRangesList("libgcloud.so")[1].start
-setvalue(so+" 0x46d7e0",4,"-698416192")
-setvalue(so+" 0x46d7e4",4,"-698416192")
-setvalue(so+" 0x46d7f0",4,"-698416192")
-setvalue(so+" 0x46d7f8",4,"-698416192")
-setvalue(so+" 0x46d7fc",4,"-698416192")
-setvalue(so+" 0x46d804",4,"-698416192")
-setvalue(so+" 0x46d808",4,"-698416192")
-setvalue(so+" 0x4187dc",4,"-698416192")
-setvalue(so+" 0x4187e0",4,"-698416192")
-setvalue(so+" 0x4187e8",4,"-698416192")
-setvalue(so+" 0x4187ec",4,"-698416192")
 
 so=gg.getRangesList("libanort.so")[1].start
 setvalue(so+" 0x1501c8",4,"-698416192")
@@ -437,6 +455,8 @@ setvalue(so+"0x23dc",4,"-698416192")
 setvalue(so+"0x23e0",4,"-698416192")
 setvalue(so+"0x23e4",4,"-698416192")
 setvalue(so+"0x23e8",4,"-698416192")
+
+
 
 
 
