@@ -28,10 +28,7 @@ end
 
 pass("hmghackk_9TQ53ucnlK","t")
 
-
-
-
-   
+  
 
     local Ranges=gg.getRangesList('/')
 local function Read(module,type)
@@ -213,20 +210,10 @@ local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
-
-so=gg.getRangesList("libanogs.so")[1].start
-setvalue(so+"0x3E0",4,"-698416192")
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x3E0",4,"-698416192")
-
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x230
-setvalue(so+py,4,"-698416192")
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x189
-setvalue(so+py,4,"-698416192")
-
-
+setvalue(so+"0x230",4,"-698416192")
+setvalue(so+"0x189",4,"-698416192")
 
 gg.alert("Bypass Logo 1st Done √")
 end
@@ -344,7 +331,6 @@ setvalue(so+"0x3c461c",4,"-698,416,192")
 setvalue(so+"0x3c4620",4,"-698,416,192")
 
 
-
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x37cf13c",4,"-698416192")
 setvalue(so+"0x37cf140",4,"-698416192")
@@ -366,6 +352,7 @@ setvalue(so+"0x3a10870",4,"-698416192")
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x3779a98",4,"-698416192")
 setvalue(so+"0x3a10870",4,"-698416192")
+
 so=gg.getRangesList("libanogs.so")[1].start
 setvalue(so+"0x3c4644",4,"-698416192")
 setvalue(so+"0x3c464c",4,"-698416192")
@@ -379,7 +366,6 @@ setvalue(so+"0x3c4684",4,"-698416192")
 
 
 
-
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x2425870",4,"-698416192")
 setvalue(so+"0x2425874",4,"-698416192")
@@ -389,6 +375,7 @@ setvalue(so+"0x2425880",4,"-698416192")
 setvalue(so+"0x2425884",4,"-698416192")
 setvalue(so+"0x2425888",4,"-698416192")
 setvalue(so+"0x242588c",4,"-698416192")
+
 so=gg.getRangesList("libanogs.so")[1].start
 setvalue(so+"0x3ee010",4,"-698416192")
 setvalue(so+"0x3ee028",4,"-698416192")
@@ -429,7 +416,6 @@ setvalue(so+"0x23dc",4,"-698416192")
 setvalue(so+"0x23e0",4,"-698416192")
 setvalue(so+"0x23e4",4,"-698416192")
 setvalue(so+"0x23e8",4,"-698416192")
-
 
 
 
