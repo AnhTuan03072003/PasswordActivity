@@ -204,7 +204,15 @@ local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
+local t = {"libUE4.so:bss", "Cb"}
+local tt = {0x13555C}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 32, value = 4758429448663908272, freeze = true}})
 
+local t = {"libUE4.so:bss", "Cb"}
+local tt = {0x158984}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 32, value = 4758429448663908272, freeze = true}})
 
 so=gg.getRangesList("libUE4.so")[1].start
 setvalue(so+"0x3E0",4,"-698416192")
