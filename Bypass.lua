@@ -265,11 +265,11 @@ gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 gg.toast("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 	
-
+gg.clearList()
 end
 
 function B2()
-gg.clearList()
+
 gg.clearResults()
 gg.setRanges(gg.REGION_C_ALLOC )
 gg.searchNumber("620137442967552;303473799200768", gg.TYPE_QWORD)
