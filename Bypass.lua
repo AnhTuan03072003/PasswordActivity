@@ -1,3 +1,19 @@
+os.remove("data/data/com.pubg.imobile/cache/volley")
+os.remove("data/data/com.pubg.imobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.tencent.ig/cache/volley")
+os.remove("data/data/com.tencent.ig/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.rekoo.pubgm/cache/volley")
+os.remove("data/data/com.rekoo.pubgm/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.vng.pubgmobile/cache/volley")
+os.remove("data/data/com.vng.pubgmobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.pubg.krmobile/cache/volley")
+os.remove("data/data/com.pubg.krmobile/shared_prefs/WebViewChromiumPrefs.xml")
+
+os.remove("/storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_2.8.0.17974.pak")
+
+os.remove("/storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
+
+
 local function pass(...)
 
 arg = {...}
@@ -197,20 +213,6 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 
 
 gg.clearResults()
-os.remove("data/data/com.pubg.imobile/cache/volley")
-os.remove("data/data/com.pubg.imobile/shared_prefs/WebViewChromiumPrefs.xml")
-os.remove("data/data/com.tencent.ig/cache/volley")
-os.remove("data/data/com.tencent.ig/shared_prefs/WebViewChromiumPrefs.xml")
-os.remove("data/data/com.rekoo.pubgm/cache/volley")
-os.remove("data/data/com.rekoo.pubgm/shared_prefs/WebViewChromiumPrefs.xml")
-os.remove("data/data/com.vng.pubgmobile/cache/volley")
-os.remove("data/data/com.vng.pubgmobile/shared_prefs/WebViewChromiumPrefs.xml")
-os.remove("data/data/com.pubg.krmobile/cache/volley")
-os.remove("data/data/com.pubg.krmobile/shared_prefs/WebViewChromiumPrefs.xml")
-
-os.remove("/storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_2.8.0.17974.pak")
-
-os.remove("/storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs")
 
 
 gg.clearResults()
@@ -260,13 +262,12 @@ local tt = {0x6B8}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
-gg.clearList()
-
 
 gg.alert("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 end
 
 function B2()
+gg.clearList()
 gg.clearResults()
 gg.setRanges(gg.REGION_C_ALLOC )
 gg.searchNumber("620137442967552;303473799200768", gg.TYPE_QWORD)
