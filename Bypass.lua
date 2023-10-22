@@ -261,10 +261,12 @@ local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x6B8}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-gg.sleep(7000)
+gg.alert("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
+	
+gg.sleep(17000)
 gg.clearList()
 
-gg.alert("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
+
 end
 
 function B2()
