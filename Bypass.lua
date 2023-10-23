@@ -283,14 +283,9 @@ gg.setRanges(gg.REGION_C_ALLOC )
 gg.searchNumber("564,058,054,983,680;566,257,078,239,232", gg.TYPE_QWORD)
 gg.refineNumber("566,257,078,239,232", gg.TYPE_QWORD)
 gg.getResults(100000)
-gg.editAll("288,516,253,469,900,800", gg.TYPE_QWORD)
+gg.editAll("288,233,678,981,562,368", gg.TYPE_QWORD)
 	
-gg.clearResults()
-gg.searchNumber("572,854,148,005,888;573,953,659,633,664", gg.TYPE_QWORD)
-gg.refineNumber("572,854,148,005,888", gg.TYPE_QWORD)
-gg.getResults(50000)
-gg.editAll("288,516,253,469,900,800", gg.TYPE_QWORD)
-gg.clearResults()
+
 	
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber("134,658;134,658", gg.TYPE_DWORD)
