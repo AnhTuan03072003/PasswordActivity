@@ -189,6 +189,9 @@ local function Read(module,type)
     end
 end
 
+so=gg.getRangesList('libUE4.so')[1].start
+py=0x33C1EF2
+setvalue(so+py,4,3081152)
 
 function HOME()
 Probolte = gg.multiChoice({
