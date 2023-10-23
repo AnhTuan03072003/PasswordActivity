@@ -277,16 +277,7 @@ gg.searchNumber("620137442967552;303473799200768", gg.TYPE_QWORD)
 gg.refineNumber("620137442967552", gg.TYPE_QWORD)
 gg.getResults(100000)
 gg.editAll("288,233,678,981,562,368", gg.TYPE_QWORD)
-gg.clearResults()
-
-gg.setRanges(gg.REGION_C_ALLOC )
-gg.searchNumber("564,058,054,983,680;566,257,078,239,232", gg.TYPE_QWORD)
-gg.refineNumber("566,257,078,239,232", gg.TYPE_QWORD)
-gg.getResults(100000)
-gg.editAll("288,233,678,981,562,368", gg.TYPE_QWORD)
-	
-
-	
+gg.clearResults()	
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber("134,658;134,658", gg.TYPE_DWORD)
 gg.refineNumber("134,658", gg.TYPE_DWORD)
