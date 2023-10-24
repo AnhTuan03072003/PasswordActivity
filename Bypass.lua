@@ -266,7 +266,7 @@ gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 gg.toast("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 
-gg.sleep(25000)
+
 	
 	gg.clearList()
 
@@ -511,25 +511,8 @@ setvalue(so+"0x273db0",4,"-698416192")
 setvalue(so+"0x274f90",4,"-698416192")
 setvalue(so+"0x274fac",4,"-698416192")
 setvalue(so+"0x274fc0",4,"-698416192")
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x628}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x6B8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
-	local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x628}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x6B8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 gg.alert("𝐋𝐨𝐛𝐛𝐲 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 end
 
