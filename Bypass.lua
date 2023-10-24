@@ -500,7 +500,12 @@ setvalue(so+"0x23dc",4,"-698416192")
 setvalue(so+"0x23e0",4,"-698416192")
 setvalue(so+"0x23e4",4,"-698416192")
 setvalue(so+"0x23e8",4,"-698416192")
-
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x273d80",4,"-698416192")
+setvalue(so+"0x273db0",4,"-698416192")
+setvalue(so+"0x274f90",4,"-698416192")
+setvalue(so+"0x274fac",4,"-698416192")
+setvalue(so+"0x274fc0",4,"-698416192")
 	
 gg.alert("𝐋𝐨𝐛𝐛𝐲 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 end
