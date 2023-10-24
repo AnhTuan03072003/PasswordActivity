@@ -219,6 +219,10 @@ gg.clearResults()
 gg.clearResults()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
 so=gg.getRangesList('libanogs.so')[1].start
+setvalue(so + "0xC839C", 4, "h C0 03 5F D6")
+
+	
+so=gg.getRangesList('libanogs.so')[1].start
 py=0x60A34
 setvalue(so+py,4,"h 00 20 70 47")
 so=gg.getRangesList('libanogs.so')[1].start
