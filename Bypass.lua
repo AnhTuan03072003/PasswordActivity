@@ -217,40 +217,149 @@ gg.clearResults()
 
 gg.clearResults()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x60A34
-setvalue(so+py,4,"h 00 20 70 47")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x60A35
-setvalue(so+py,4,"h 00 20 70 47")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x376444
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x376440
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x4B7B80
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x4B7B7C
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x4B7B78
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x4B7B74
-setvalue(so+py,4,"h FF FF FF FF")
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x4B7B70
-setvalue(so+py,4,"h FF FF FF FF")
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("13073.374", gg.TYPE_FLOAT)
-gg.refineNumber("13073.374", gg.TYPE_FLOAT)
-gg.getResults(100000)
-gg.editAll("20", gg.TYPE_FLOAT)
+os.remove("data/data/com.pubg.imobile/cache/volley")
+os.remove("data/data/com.pubg.imobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.tencent.ig/cache/volley")
+os.remove("data/data/com.tencent.ig/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.rekoo.pubgm/cache/volley")
+os.remove("data/data/com.rekoo.pubgm/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.vng.pubgmobile/cache/volley")
+os.remove("data/data/com.vng.pubgmobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.pubg.krmobile/cache/volley")
+os.remove("data/data/com.pubg.krmobile/shared_prefs/WebViewChromiumPrefs.xml")
 gg.clearResults()
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E80
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E84
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E88
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E94
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E98
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E9C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74BC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74C8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74CC
+setvalue(so+py,4,"h 00 00 00 00")
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74D0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74D4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74E0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74E4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A750C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7510
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A754C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7648
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7630
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7668
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76B4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76CC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76D0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77B0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77C0
+setvalue(so+py,4,"h 00 00 00 00")
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77C8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77EC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77E4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77E8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3c9bec", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf0", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf4", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf8", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bfc", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c00", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c04", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c08", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c10", 4,"h 00 00 00 00")
+
+
+
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x628}
@@ -262,77 +371,155 @@ local tt = {0x6B8}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
-gg.clearList()
+
 
 gg.alert("𝐋𝐨𝐠𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 end
 
 function B2()
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC )
-gg.searchNumber("620137442967552;303473799200768", gg.TYPE_QWORD)
-gg.refineNumber("620137442967552", gg.TYPE_QWORD)
-gg.getResults(50000)
-gg.editAll("288,233,678,981,562,368", gg.TYPE_QWORD)
+os.remove("data/data/com.pubg.imobile/cache/volley")
+os.remove("data/data/com.pubg.imobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.tencent.ig/cache/volley")
+os.remove("data/data/com.tencent.ig/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.rekoo.pubgm/cache/volley")
+os.remove("data/data/com.rekoo.pubgm/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.vng.pubgmobile/cache/volley")
+os.remove("data/data/com.vng.pubgmobile/shared_prefs/WebViewChromiumPrefs.xml")
+os.remove("data/data/com.pubg.krmobile/cache/volley")
+os.remove("data/data/com.pubg.krmobile/shared_prefs/WebViewChromiumPrefs.xml")
 gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("134,658;134,658", gg.TYPE_DWORD)
-gg.refineNumber("134,658", gg.TYPE_DWORD)
-gg.getResults(100000)
-gg.editAll("84,149,249", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("134,914;262,403", gg.TYPE_DWORD)
-gg.refineNumber("134,914", gg.TYPE_DWORD)
-gg.getResults(100000)
-gg.editAll("84,149,249", gg.TYPE_DWORD)
-gg.clearResults()
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC )
-gg.searchNumber("66,048;33,554,432", gg.TYPE_DWORD)
-gg.refineNumber("66,048", gg.TYPE_DWORD)
-gg.getResults(50000)
-gg.editAll("84,149,249", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC )
-gg.searchNumber("33,554,432;524,547", gg.TYPE_DWORD)
-gg.refineNumber("524,547", gg.TYPE_DWORD)
-gg.getResults(50000)
-gg.editAll("84,149,249", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("144,387;133,634", gg.TYPE_DWORD)
-gg.refineNumber("144,387", gg.TYPE_DWORD)
-gg.getResults(100000)
-gg.editAll("84,149,249", gg.TYPE_DWORD)
-gg.clearResults()
-gg.getResults(50000)
-gg.editAll(";", gg.TYPE_WORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber(":/report")
-gg.refineNumber(":/report")
-gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(":0", gg.TYPE_BYTE)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber(":cheat")
-gg.refineNumber(":cheat")
-gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(":0", gg.TYPE_BYTE)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber(":Cheat")
-gg.refineNumber(":Cheat")
-gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(":0", gg.TYPE_BYTE)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber(":/tss")
-gg.refineNumber(":/tss")
-gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(":0", gg.TYPE_BYTE)
-gg.clearResults()
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end 
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E80
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E84
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E88
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E94
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E98
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A6E9C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74BC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74C8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74CC
+setvalue(so+py,4,"h 00 00 00 00")
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74D0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74D4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74E0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A74E4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A750C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7510
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A754C
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7648
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7630
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A7668
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76B4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76CC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A76D0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77B0
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77C0
+setvalue(so+py,4,"h 00 00 00 00")
+
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77C8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77EC
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77E4
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x3A77E8
+setvalue(so+py,4,"h 00 00 00 00")
+
+so=gg.getRangesList("libanogs.so")[1].start
+setvalue(so+"0x3c9bec", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf0", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf4", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bf8", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9bfc", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c00", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c04", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c08", 4,"h 00 00 00 00")
+setvalue(so+"0x3c9c10", 4,"h 00 00 00 00")
+
+
+
 gg.alert("𝐋𝐨𝐛𝐛𝐲 𝐁𝐲𝐩𝐚𝐬𝐬 𝐀𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝")
 end
 
