@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghackk_LPIj7XPIoq","t")
+pass("hmghakk_J6qD1ApgahLPzVC","t")
 
 gg.alert("⚠️ CẢNH BÁO ⚠️\n👉 Vui Lòng Bật Hack Sau Khi Đã Bật Tường Lửa Và Không Tắt Đến Hết Trận\n👉 Kết Thúc Trận Chọn Thoát Trận Trong Menu\n👉 Mọi Sự Ngu Dốt Của Bạn Thì Bạn Phải Chấp Nhận")
 
