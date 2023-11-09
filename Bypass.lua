@@ -78,4 +78,21 @@ local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
+so=gg.getRangesList('libanogs.so')[1].start
+
+
+setvalue(so + "0x155210", 32, "h 00 00 B0 E3 1E FF 2F E1")
+setvalue(so + "0x158A04", 32, "h 00 00 B0 E3 1E FF 2F E1")
+setvalue(so + "0x153C08", 32, "h 00 00 B0 E3 1E FF 2F E1")
+setvalue(so + "0xE7298", 32, "h 00 00 B0 E3 1E FF 2F E1")
+setvalue(so + "0xE5600", 32, "h 00 00 B0 E3 1E FF 2F E1")
+setvalue(so + "0xB4442", 32, "h 00 20 70 47")
+
+
+so=gg.getRangesList('libanogs.so:bss')[1].start
+
+setvalue(so + "0x628", 4, "17511")
+	
