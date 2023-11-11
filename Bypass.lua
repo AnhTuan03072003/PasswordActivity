@@ -91,8 +91,3 @@ setvalue(so + "0xE7298", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xE5600", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xB4442", 32, "h 00 20 70 47")
 
-
-so=gg.getRangesList('libanogs.so:bss')[1].start
-
-setvalue(so + "0x628", 4, "17511")
-	
