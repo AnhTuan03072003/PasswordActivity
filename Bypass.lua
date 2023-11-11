@@ -91,3 +91,157 @@ setvalue(so + "0xE7298", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xE5600", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xB4442", 32, "h 00 20 70 47")
 
+	local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xC0, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xC0, 0xE8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1130, 0xD0, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1130, 0xD0, 0xE8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1188, 0x50, 0x9C}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1188, 0xD0, 0x4C}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x11A8, 0x30, 0x60}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0x30, 0x68}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0x30, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0x30, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0x30, 0xE8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0xC0, 0x28}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0xC0, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0xC0, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xD0, 0xC0, 0xC8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0xC0, 0x40, 0xC8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0x30, 0x68}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0x30, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0x30, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0x30, 0xE8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0xC0, 0x28}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0xC0, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0xC0, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x10, 0xC0, 0xC8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0x30, 0x68}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0x30, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0x30, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0x30, 0xE8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0xC0, 0x28}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0xC0, 0x8}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x578D8, 0x30, 0xC0, 0x88}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
