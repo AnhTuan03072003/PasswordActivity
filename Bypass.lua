@@ -113,30 +113,6 @@ function S_Pointer(t_So, t_Offset, _bit)
 	end
 	
 
-	
-
----@XSYYEM
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1218}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1318}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1358}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x628}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 
 
@@ -296,6 +272,28 @@ local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 17024, freeze = true}})
 
 
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1218}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1318}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x1358}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x628}
+local ttt = S_Pointer(t, tt, true)
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
+
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 	
@@ -306,5 +304,6 @@ setvalue(so + "0x153C08", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xE7298", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xE5600", 32, "h 00 00 B0 E3 1E FF 2F E1")
 setvalue(so + "0xB4442", 32, "h 00 20 70 47")
+
 
 	
