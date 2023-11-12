@@ -61,11 +61,6 @@ end
 
 
 local t = {"libanogs.so", "Cd"}
-local tt = {0x628}
-local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 64}})
-
-local t = {"libanogs.so", "Cd"}
 local tt = {0x57C48}
 local ttt = S_Pointer(t, tt, true)
 gg.setValues({{address = ttt, flags = 4, value = 64}})
@@ -74,3 +69,4 @@ local t = {"libanogs.so", "Cd"}
 local tt = {0x57F08}
 local ttt = S_Pointer(t, tt, true)
 gg.setValues({{address = ttt, flags = 4, value = 64}})
+			
