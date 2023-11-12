@@ -1,4 +1,3 @@
-
 function S_Pointer(t_So, t_Offset, _bit)
 	local function getRanges()
 		local ranges = {}
@@ -6,7 +5,7 @@ function S_Pointer(t_So, t_Offset, _bit)
 		for i, v in pairs(t) do
 			if v.type:sub(2, 2) == 'w' then
 				table.insert(ranges, v)
-			end
+			end--删频道号sm@WLnbYYDS666
 		end
 		return ranges
 	end
@@ -15,7 +14,7 @@ function S_Pointer(t_So, t_Offset, _bit)
 		local S_list = getRanges()
 		local _Q = tonumber(0x167ba0fe)
 		local t = {}
-		local _t
+		local _t--删频道号sm@WLnbYYDS666
 		local _S = nil
 		if ti_bit then
 			_t = 32
@@ -28,7 +27,7 @@ function S_Pointer(t_So, t_Offset, _bit)
 				_S = S_list[i]
 				break
 			end
-		end
+		end--删频道号sm@WLnbYYDS666
 		if _S then
 			t[#t + 1] = {}
 			t[#t].address = _S.start + Offset[1]
@@ -46,7 +45,7 @@ function S_Pointer(t_So, t_Offset, _bit)
 						t[#t].flags = _t
 					end
 				end
-			end
+			end--删频道号sm@WLnbYYDS666
 			_S = t[#t].address
 			print(string.char(231,190,164,58).._Q)
 		end
@@ -55,12 +54,23 @@ function S_Pointer(t_So, t_Offset, _bit)
 	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
 	return _A
 end
+--by.挽恋
+--删频道号sm@WLnbYYDS666
 
 
 
 
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x1358}
+local t = {"libanogs.so", "Cd"}
+local tt = {0x628}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+gg.setValues({{address = ttt, flags = 4, value = 64}})
+
+local t = {"libanogs.so", "Cd"}
+local tt = {0x57C48}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 64}})
+--删频道号sm@WLnbYYDS666
+local t = {"libanogs.so", "Cd"}
+local tt = {0x57F08}
+local ttt = S_Pointer(t, tt, true)
+gg.setValues({{address = ttt, flags = 4, value = 64}})
