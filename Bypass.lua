@@ -6,4 +6,20 @@ local so = gg.getRangesList('libanogs.so:bss')[1].start
 local py = 0x13B0
 setvalue(so + py, 64, 4)
 
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
 gg.alert("Fix Crash Thành Công 👍")
