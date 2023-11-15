@@ -20,7 +20,6 @@ VIPONLY = gg.multiChoice({
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
-if VIPONLY[2]== true then B2() end
 end
 PUBGMH = -1
 end
