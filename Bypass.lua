@@ -14,7 +14,7 @@ gg.alert("Fix Văng Game √")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"➥ Bypass Lobby Aimbot [Sảnh - No Safe ☠️",
+"➥ Bypass Lobby Aimbot [Sảnh - No Safe ☠️]",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
 
