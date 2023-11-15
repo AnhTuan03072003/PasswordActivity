@@ -1,8 +1,20 @@
+function setvalue(address, value, flags)
+ gg.setValues({{address = address, flags = flags, value = value}})
+end
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+gg.alert("Fix Văng Game √")
+
+
+
+
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"➥Logo 1st + Fix Văng Game 🛡",
-"➥Lobby [Sảnh - No Safe ☠️] ",
+"➥ Bypass Lobby Aimbot [Sảnh - No Safe ☠️",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
 
@@ -13,30 +25,12 @@ end
 PUBGMH = -1
 end
 
+
+
+
+
+
 function B1()
-
-
-
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
-end
-
-local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
-
- local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
- 
- local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
-
-gg.alert("Fix Văng Game √")
-end
-
-function B2()
 gg.alert("👉 Chưa Ổn Đỉnh Khi Chơi Aimbot\n👉 Khuyến Khích Không Bật Khi Chỉ Chơi Esp")
 
 
