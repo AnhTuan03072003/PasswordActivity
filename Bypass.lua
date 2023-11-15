@@ -2,7 +2,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "➥Logo 1st + Fix Văng Game 🛡",
-"➥Lobby [Sảnh Chờ] 🛡",
+"➥Lobby [Sảnh - No Safe ☠️] ",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
 
