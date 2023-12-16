@@ -1,3 +1,53 @@
+
+function setvalue(address, value, flags)
+ gg.setValues({{address = address, flags = flags, value = value}})
+end
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+
+
+
+function setvalue(address, value, flags)
+ gg.setValues({{address = address, flags = flags, value = value}})
+end
+
+local so = gg.getRangesList('libanogs.so:bss')[1].start
+local py = 0x13B0
+setvalue(so + py, 64, 4)
+
+
+
+
+
+function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
+
+
+gg.alert("Fix Văng Game √")
+
+
+
+
+HOME = 1
+function HOME()
+VIPONLY = gg.multiChoice({
+"Lobby Bypass [Test Aimbot]",
+"Menu Skin Mod",
+
+}, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
+
+if VIPONLY == nil then else
+if VIPONLY[1]== true then B1() end
+if VIPONLY[2]== true then B2() end
+
+end
+PUBGMH = -1
+end
+
+
+function B1()
 function S_Pointer(t_So, t_Offset, _bit)
 	local function getRanges()
 		local ranges = {}
@@ -53,13 +103,6 @@ function S_Pointer(t_So, t_Offset, _bit)
 	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
 	return _A
 end
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
-end
-
-local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
 
 
 
@@ -67,12 +110,6 @@ function PS() end
 function setvalue(address,flags,value) PS('修改地址数值(地址,数值类型,要修改的值)') local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 function setvalue(address,flags,value,freeze) PS('开启地址数值(地址,数值类型,要开启的值)') local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value tt[1].freeze=freeze gg.setValues(tt) gg.addListItems(tt) end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end          
-
-
-
-
-
-
 
 
 so=gg.getRangesList("libanogs.so")[1].start
@@ -318,113 +355,69 @@ setvalue(so+py,4,-698416192)
 
 
 so=gg.getRangesList("libUE4.so")[1].start
-py=0xba6760
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0xcc0bf8
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0xcc3298
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0xf3b2c0
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x102d6d8
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x108ee78
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x10ed300
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x10ed390
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x10ed3c0
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x121fb10
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x1722850
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x1722880
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x17d0538
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x22fa7d0
-setvalue(so+py,4,-698416192)
-
-so=gg.getRangesList("libUE4.so")[1].start
 py=0x233a520
 setvalue(so+py,4,-698416192)
 
-
-
-
-
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
+local Ranges=gg.getRangesList('/')
+local function Read(module,type)
+    for k,v in pairs(Ranges) do
+        if v['internalName']:match('[^/]*$')==module and v['type']==type then
+            return v['start']
+        end
+    end
 end
 
-local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
-
-
-
-
-
-
-
-function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
-
-
-gg.alert("Fix Văng Game - Bypass Logo √")
-
-
-
-
-HOME = 1
-function HOME()
-VIPONLY = gg.multiChoice({
-"Menu Skin Mod",
-
-}, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
-
-if VIPONLY == nil then else
-if VIPONLY[1]== true then B1() end
-
-end
-PUBGMH = -1
+local Table={}
+local function Modify(address,value,flags)
+    Table[#Table+1]={address=address,value=value,flags=flags}
 end
 
+Modify(Read('libUE4.so:bss','rw-p')+0xdd174,295,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x14fb84,36,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x150760,67109186,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x150764,268,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x150990,3758097020,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x150994,128,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x1593f8,1811940462,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x1593fc,131,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x15b78c,144,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x15d0d0,603980955,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x15d1e8,3489661050,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x15d1ec,145,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x192188,3304980480,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x1921b0,3304980480,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x192f34,887,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x193ecc,7100,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x298444,120,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29844c,120,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29ad94,0,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29b340,0,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29b754,0,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29b758,0,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29b75c,0,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f034,121,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f038,1443,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f03c,1572,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f088,4022,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f100,1,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x29f108,20,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x2a0ed4,1443,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x2a0f24,170,4)
+Modify(Read('libUE4.so:bss','rw-p')+0x2a0f74,7,4)
+gg.setValues(Table)
 
 
 
 
 
+gg.alert("An Toàn Chỉ Dùng ESP √")
+end
 
 
-function B1()
+
+
+
+function B2()
 
 local function pass(...)
 
@@ -693,8 +686,3 @@ if PUBGMH == 1 then
 HOME()
 end
 end
-
-
-
-
-
