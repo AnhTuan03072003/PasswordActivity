@@ -7,6 +7,9 @@ local so = gg.getRangesList('libanogs.so:bss')[1].start
 local py = 0x13B0
 setvalue(so + py, 64, 4)
 
+
+
+
 function setvalue(address, value, flags)
  gg.setValues({{address = address, flags = flags, value = value}})
 end
@@ -368,7 +371,7 @@ end
 
 
 
-function B3()
+function B2()
 so=gg.getRangesList('libgcloud.so')[1].start 
 py=0x4245E4
 setvalue(so+py,4,0)
@@ -393,7 +396,7 @@ end
 
 
 
-function B2()
+function B3()
 
 local function pass(...)
 
