@@ -7,9 +7,6 @@ local so = gg.getRangesList('libanogs.so:bss')[1].start
 local py = 0x13B0
 setvalue(so + py, 64, 4)
 
-
-
-
 function setvalue(address, value, flags)
  gg.setValues({{address = address, flags = flags, value = value}})
 end
@@ -34,6 +31,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "Lobby Bypass [Test Aimbot]",
+"Bypass Island",
 "Menu Skin Mod",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
@@ -41,7 +39,7 @@ VIPONLY = gg.multiChoice({
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
 if VIPONLY[2]== true then B2() end
-
+if VIPONLY[3]== true then B3() end
 end
 PUBGMH = -1
 end
@@ -362,13 +360,35 @@ setvalue(so+py,4,-698416192)
 
 
 
-	
-
-
 
 gg.alert("An Toàn Chỉ Dùng ESP √")
 end
 
+
+
+
+
+function B3()
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x4245E4
+setvalue(so+py,4,0)
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x497644
+setvalue(so+py,4,0)
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x4245E4
+setvalue(so+py,4,0)
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x497644
+setvalue(so+py,4,0)
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x4245E4
+setvalue(so+py,4,0)
+so=gg.getRangesList('libgcloud.so')[1].start 
+py=0x497644
+setvalue(so+py,4,0)
+gg.alert("Hết Trận Thoát Game √")
+end
 
 
 
