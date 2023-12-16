@@ -73,10 +73,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 
 
 
-so=gg.getRangesList('libUE4.so')[1].start
-setvalue(so+0X7678A2C,4,-698416192)	
-setvalue(so+0X7678B48,4,-698416192)
-setvalue(so+0X7679384,4,-698416192)
+
 
 so=gg.getRangesList("libanogs.so")[1].start
 py=0x2a7a40
