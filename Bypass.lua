@@ -388,18 +388,7 @@ setvalue(so+py,4,0)
 so=gg.getRangesList('libgcloud.so')[1].start 
 py=0x497644
 setvalue(so+py,4,0)
-so=gg.getRangesList('libgcloud.so')[1].start 
-py=0x4245E4
-setvalue(so+py,4,0)
-so=gg.getRangesList('libgcloud.so')[1].start 
-py=0x497644
-setvalue(so+py,4,0)
-so=gg.getRangesList('libgcloud.so')[1].start 
-py=0x4245E4
-setvalue(so+py,4,0)
-so=gg.getRangesList('libgcloud.so')[1].start 
-py=0x497644
-setvalue(so+py,4,0)
+
 gg.alert("Hết Trận Thoát Game √")
 end
 
