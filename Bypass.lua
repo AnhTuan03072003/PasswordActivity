@@ -379,13 +379,6 @@ function setvalue(address,flags,value) PS('修改地址数值(地址,数值类�
 function setvalue(address,flags,value,freeze) PS('开启地址数值(地址,数值类型,要开启的值)') local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value tt[1].freeze=freeze gg.setValues(tt) gg.addListItems(tt) end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end          
 
-function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
-
-
-
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
-end
 
 
 
