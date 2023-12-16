@@ -358,55 +358,11 @@ so=gg.getRangesList("libUE4.so")[1].start
 py=0x233a520
 setvalue(so+py,4,-698416192)
 
-local Ranges=gg.getRangesList('/')
-local function Read(module,type)
-    for k,v in pairs(Ranges) do
-        if v['internalName']:match('[^/]*$')==module and v['type']==type then
-            return v['start']
-        end
-    end
-end
-
-local Table={}
-local function Modify(address,value,flags)
-    Table[#Table+1]={address=address,value=value,flags=flags}
-end
-
-Modify(Read('libUE4.so:bss','rw-p')+0xdd174,295,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x14fb84,36,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x150760,67109186,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x150764,268,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x150990,3758097020,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x150994,128,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x1593f8,1811940462,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x1593fc,131,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x15b78c,144,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x15d0d0,603980955,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x15d1e8,3489661050,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x15d1ec,145,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x192188,3304980480,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x1921b0,3304980480,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x192f34,887,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x193ecc,7100,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x298444,120,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29844c,120,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29ad94,0,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29b340,0,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29b754,0,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29b758,0,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29b75c,0,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f034,121,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f038,1443,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f03c,1572,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f088,4022,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f100,1,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x29f108,20,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x2a0ed4,1443,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x2a0f24,170,4)
-Modify(Read('libUE4.so:bss','rw-p')+0x2a0f74,7,4)
-gg.setValues(Table)
 
 
+
+
+	
 
 
 
