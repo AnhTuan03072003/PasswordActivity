@@ -355,14 +355,6 @@ setvalue(so+py,4,-698416192)
 
 
 
-so=gg.getRangesList("libUE4.so")[1].start
-py=0x233a520
-setvalue(so+py,4,-698416192)
-
-
-
-
-
 
 gg.alert("An Toàn Chỉ Dùng ESP √")
 end
