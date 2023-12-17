@@ -378,9 +378,6 @@ function B2()
 
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end          
 
-
-
-
 so=gg.getRangesList('libgcloud.so')[1].start 
 py=0x4245E4
 setvalue(so+py,4,0)
