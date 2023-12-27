@@ -1,3 +1,35 @@
+local function pass(...)
+
+arg = {...}
+
+local pas = gg.prompt
+
+({"Vui Lòng Nhập Key"}, {},{"text"})
+
+pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
+
+for i = 1, #arg do
+
+if arg[i] .. " " ==  pas then
+
+return gg.toast("Nhập Key Thành Công ✅")
+
+end
+
+end
+
+while (true) do
+
+os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
+
+end 
+
+end
+
+pass("10k","VeGIDLPC7h9HKcpykAEZ")
+
+
+
 
 function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
 
@@ -526,37 +558,6 @@ end
 
 
 function B3()
-
-local function pass(...)
-
-arg = {...}
-
-local pas = gg.prompt
-
-({"Vui Lòng Donate 10K Qua STK: 150724090307 (MBBank)\nNhắn tin qua telegram: @hoangminhgiang"}, {},{"text"})
-
-pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
-
-for i = 1, #arg do
-
-if arg[i] .. " " ==  pas then
-
-return gg.toast("Nhập Key Thành Công ✅")
-
-end
-
-end
-
-while (true) do
-
-os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
-
-end 
-
-end
-
-pass("10k","t")
-
 
 
 
