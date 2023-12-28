@@ -410,6 +410,62 @@ local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
 
 
+
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA3A0
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA3DC
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA4A8
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA7FC
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA9A0
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xC22E8
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xC2360
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xC2C2C
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xC23D8
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xC23E4
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0x40E8C
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA9D0
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCA9E8
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCADE4
+setvalue(so+py,16,-2.0291020897676e20)
+so=gg.getRangesList("libgcloud.so")[1].start
+py=0xCAB74
+setvalue(so+py,16,-2.0291020897676e20)
+
+
+so=gg.getRangesList("libanogs.so")[1].start
+py=0xC98E0
+setvalue(so+py,16,-274877906944)
+
+
 gg.alert("Bypass Lobby √")
 
 end
