@@ -26,7 +26,7 @@ end
 
 end
 
-pass("t","bSgRX89TeiBOQIHKajqh")
+pass("t","DITMEMAYTENCENT")
 
 
 
