@@ -66,7 +66,7 @@ gg.alert("Fix Văng Game √")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"Bypass Sảnh [Use Aimbot]",
+"Bypass Lobby Sảnh [⚠️Aimbot Nguy Hiểm⚠️]",
 "Menu Skin Mod",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
@@ -165,308 +165,157 @@ setvalue(so+py,4, 17024)
 so=gg.getRangesList('libUE4.so')[1].start
 py=0x24C98BC
 setvalue(so+py,4, 17024)
-function S_Pointer(t_So, t_Offset, _bit)
-	local function getRanges()
-		local ranges = {}
-		local t = gg.getRangesList('^/data/*.so*$')
-		for i, v in pairs(t) do
-			if v.type:sub(2, 2) == 'w' then
-				table.insert(ranges, v)
-			end
-		end
-		return ranges
-	end
-	local function Get_Address(N_So, Offset, ti_bit)
-		local ti = gg.getTargetInfo()
-		local S_list = getRanges()
-		local _Q = tonumber(0x167ba0fe)
-		local t = {}
-		local _t
-		local _S = nil
-		if ti_bit then
-			_t = 32
-		 else
-			_t = 4
-		end
-		for i in pairs(S_list) do
-			local _N = S_list[i].internalName:gsub('^.*/', '')
-			if N_So[1] == _N and N_So[2] == S_list[i].state then
-				_S = S_list[i]
-				break
-			end
-		end
-		if _S then
-			t[#t + 1] = {}
-			t[#t].address = _S.start + Offset[1]
-			t[#t].flags = _t
-			if #Offset ~= 1 then
-				for i = 2, #Offset do
-					local S = gg.getValues(t)
-					t = {}
-					for _ in pairs(S) do
-						if not ti.x64 then
-							S[_].value = S[_].value & 0xFFFFFFFF
-						end
-						t[#t + 1] = {}
-						t[#t].address = S[_].value + Offset[i]
-						t[#t].flags = _t
-					end
-				end
-			end
-			_S = t[#t].address
-			print(string.char(231,190,164,58).._Q)
-		end
-		return _S
-	end
-	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
-	return _A
-end
 
-
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EAC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EB4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EB8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EBC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EC0}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8ECC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EF4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8EF8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F00}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F04}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F08}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F10}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F14}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F18}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F20}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F58}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F60}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F68}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F6C}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F74}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F78}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F7C}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8F80}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FB4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FBC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FC4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FCC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FD0}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FD4}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FF0}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FF8}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x8FFC}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x9000}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x9004}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x9008}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x9010}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x9014}
-local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 17920, freeze = true}})
-
-
-
-
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA3A0
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA3DC
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA4A8
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA7FC
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA9A0
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xC22E8
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xC2360
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xC2C2C
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xC23D8
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xC23E4
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0x40E8C
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA9D0
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCA9E8
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCADE4
-setvalue(so+py,16,-2.0291020897676e20)
-so=gg.getRangesList("libgcloud.so")[1].start
-py=0xCAB74
-setvalue(so+py,16,-2.0291020897676e20)
-
+so=gg.getRangesList("libanogs.so:bss")[1].start
+py=0xDC68
+setvalue(so+py,4,17024,true)
+py=0xDCAC
+setvalue(so+py,4,17024,true)
+py=0xDD10
+setvalue(so+py,4,17024,true)
+py=0xDD24
+setvalue(so+py,4,17024,true)
+py=0xDD8C
+setvalue(so+py,4,17024,true)
+py=0xDD94
+setvalue(so+py,4,17024,true)
+py=0xDEAC
+setvalue(so+py,4,17024,true)
+py=0xDEFC
+setvalue(so+py,4,17024,true)
+py=0xDF10
+setvalue(so+py,4,17024,true)
+py=0xDF14
+setvalue(so+py,4,17024,true)
+py=0xDF20
+setvalue(so+py,4,17024,true)
+py=0xDF44
+setvalue(so+py,4,17024,true)
+py=0xDF54
+setvalue(so+py,4,17024,true)
+py=0xDFB4
+setvalue(so+py,4,17024,true)
+py=0xE07C
+setvalue(so+py,4,17024,true)
+py=0xE084
+setvalue(so+py,4,17024,true)
+py=0xE0A4
+setvalue(so+py,4,17024,true)
+py=0xE0AC
+setvalue(so+py,4,17024,true)
+py=0xEA9C
+setvalue(so+py,4,17024,true)
+py=0xEAB4
+setvalue(so+py,4,17024,true)
+py=0xEADC
+setvalue(so+py,4,17024,true)
+py=0xEAE4
+setvalue(so+py,4,17024,true)
+py=0xEE50
+setvalue(so+py,4,17024,true)
+py=0xEE54
+setvalue(so+py,4,17024,true)
+py=0xEE80
+setvalue(so+py,4,17024,true)
+py=0xEFBC
+setvalue(so+py,4,17024,true)
+py=0xEFD0
+setvalue(so+py,4,17024,true)
+py=0x10A5C
+setvalue(so+py,4,17024,true)
+py=0x10A88
+setvalue(so+py,4,17024,true)
+py=0x10AA8
+setvalue(so+py,4,17024,true)
+py=0x10AB8
+setvalue(so+py,4,17024,true)
+py=0x10AC4
+setvalue(so+py,4,17024,true)
+py=0x10AF0
+setvalue(so+py,4,17024,true)
+py=0x10B04
+setvalue(so+py,4,17024,true)
+py=0x10B58
+setvalue(so+py,4,17024,true)
+py=0x10B80
+setvalue(so+py,4,17024,true)
+py=0x10BC8
+setvalue(so+py,4,17024,true)
+py=0x10BCC
+setvalue(so+py,4,17024,true)
+py=0x10BE0
+setvalue(so+py,4,17024,true)
+py=0x10BE4
+setvalue(so+py,4,17024,true)
+py=0x10BFC
+setvalue(so+py,4,17024,true)
+py=0x10C10
+setvalue(so+py,4,17024,true)
+py=0x10C20
+setvalue(so+py,4,17024,true)
+py=0x10C40
+setvalue(so+py,4,17024,true)
+py=0x10C44
+setvalue(so+py,4,17024,true)
+py=0x10C4C
+setvalue(so+py,4,17024,true)
+py=0x10C54
+setvalue(so+py,4,17024,true)
+py=0x10C6C
+setvalue(so+py,4,17024,true)
+py=0x10C70
+setvalue(so+py,4,17024,true)
+py=0x10C78
+setvalue(so+py,4,17024,true)
+py=0x10C7C
+setvalue(so+py,4,17024,true)
+py=0x10C90
+setvalue(so+py,4,17024,true)
+py=0x10C94
+setvalue(so+py,4,17024,true)
+py=0x10C98
+setvalue(so+py,4,17024,true)
 
 so=gg.getRangesList("libanogs.so")[1].start
 py=0xC98E0
 setvalue(so+py,16,-274877906944)
 
 
-gg.alert("Bypass Lobby √")
+so=gg.getRangesList('libanogs.so')[1].start
+py=0x15E4
+setvalue(so+py,16,-61301799780352)
+py=0x47D8
+setvalue(so+py,16,-61301799780352)
+py=0x4820
+setvalue(so+py,16,-61301799780352)
+py=0x4B10
+setvalue(so+py,16,-61301799780352)
+py=0x4C3C
+setvalue(so+py,16,-61301799780352)
+py=0xE090
+setvalue(so+py,16,-61301799780352)
+py=0xE294
+setvalue(so+py,16,-61301799780352)
+py=0xEB9C
+setvalue(so+py,16,-61301799780352)
+py=0xEE24
+setvalue(so+py,16,-61301799780352)
+py=0xF3B8
+setvalue(so+py,16,-61301799780352)
+py=0x11F74
+setvalue(so+py,16,-61301799780352)
+py=0x127A4
+setvalue(so+py,16,-61301799780352)
+py=0x13214
+setvalue(so+py,16,-61301799780352)
+py=0x13C40
+setvalue(so+py,16,-61301799780352)
+py=0x1481C
+setvalue(so+py,16,-61301799780352)
+
+
+
+gg.alert("Bypass Lobby √\n⚠️ Aimbot Không An Toàn ⚠️")
 
 end
 
@@ -493,7 +342,8 @@ mainmenu = gg.multiChoice({
 "M4 Băng (Tắt Top 1 Hoặc Chết)",
 "M4 Blood Raven (Bật Đảo Chờ)",
 "M4 Blood Raven (Tắt Top 1 Hoặc Chết)",
-"comming soon",
+"Combo 1 (Bật Đảo Chờ) ",
+"Combo 1 (Tắt Top 1 Hoặc Chết)",
 
 }, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
 if mainmenu == nil then hide = -1 else
@@ -508,16 +358,143 @@ if mainmenu [8] == true then m4bang1() end
 if mainmenu [9] == true then m4bang2() end 
 if mainmenu [10] == true then m4blood1() end 
 if mainmenu [11] == true then m4blood2() end 
-if mainmenu [12] == true then up() end 
+if mainmenu [12] == true then combo1on() end 
+if mainmenu [13] == true then combo1off() end 
 
 
 PUBGMH = -1
 end
 end
 
-function up()
+function combo1on()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502001180", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502001180", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502002180", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502002180", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003180", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Helm mutan On")
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501001199", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501001199", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501002199", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501002199", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003199", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501006", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003199", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Bag cactus serif On")
 end
 
+function combo1off()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501001199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501001", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501001199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501004", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501002199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501002", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501002199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501005", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501003", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501006", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Bag cactus serif OFF")
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502001180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502001", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502001180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502004", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502002180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502002", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502002180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502005", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502003", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Helm mutan OFF")
+end
 
 function Suit1()
 gg.setRanges(gg.REGION_ANONYMOUS)
