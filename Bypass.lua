@@ -31,31 +31,12 @@ pass("t","ChucMoiNguoiNamMoiVuiVe")
 
 
 
-function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 
-
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
-end
-
-local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
-
-
-
-
-function setvalue(address, value, flags)
- gg.setValues({{address = address, flags = flags, value = value}})
-end
-
-local so = gg.getRangesList('libanogs.so:bss')[1].start
-local py = 0x13B0
-setvalue(so + py, 64, 4)
-
-
-
+so=gg.getRangesList('libanogs.so:bss')[1].start
+py=0x13B0
+setvalue(so+py,4,"h 40 00 00 00")
 
 
 gg.alert("Fix Văng Game √")
@@ -66,14 +47,12 @@ gg.alert("Fix Văng Game √")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"Bypass Lobby [Aimbot Nguy Hiem]",
 "Menu Skin Mod",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
-if VIPONLY[2]== true then B2() end
 
 
 end
@@ -86,141 +65,7 @@ end
 
 
 
-
-
 function B1()
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F64
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F6C
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F7C
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F84
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F88
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6F9C
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FAC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FCC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FD4
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FD8
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FE0
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FEC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FF4
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FF8
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x6FFC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C96FC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9728
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9730
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9738
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9784
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C97C8
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C97EC
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9864
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C9898
-setvalue(so+py,4, 17024)
-so=gg.getRangesList('libUE4.so')[1].start
-py=0x24C98BC
-setvalue(so+py,4, 17024)
-
-
-so=gg.getRangesList('libanogs.so')[1].start
-py=0x15E4
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x47D8
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x4820
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x4B10
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x4C3C
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0xE090
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0xE294
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0xEB9C
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0xEE24
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0xF3B8
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x11F74
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x127A4
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x13214
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x13C40
-setvalue(so+py,4,"h C0 03 5F D6")
-py=0x1481C
-setvalue(so+py,4,"h C0 03 5F D6")
-
-so=gg.getRangesList('libanogs.so')[1].start 
-setvalue(so + 0x4A518,4,"h 00 BF 00 BF")
-setvalue(so + 0x8E09E,4,"h 00 20 70 47")
-setvalue(so + 0x49D70,4,"h 00 20 70 47")
-setvalue(so + 0x9601C,4,"h 00 20 70 47")
-setvalue(so + 0xC98E0,4,"h 00 00 80 D2 C0 03 5F D6")
-
-
-
-
-gg.alert("Bypass Lobby √")
-
-end
-
-
-
-
-
-
-
-
-function B2()
 
 
 
