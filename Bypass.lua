@@ -48,11 +48,14 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "Menu Skin Mod",
+"Thoát Menu Nếu Lag",
 
 }, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
+ if VIPONLY[2]== true then B2() end
+
 
 
 end
@@ -168,6 +171,20 @@ gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1501003199", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast(" Bag cactus serif On")
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("10200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1102002090", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("29200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1020020901", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Ump mainan On3 ")
+
 end
 
 function combo1off()
@@ -233,6 +250,20 @@ gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502003", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast(" Helm mutan OFF")
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1102002090", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10200200", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1020020901", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("29200200", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Ump mainan OFF3 ")
+
 end
 
 function Suit1()
@@ -421,6 +452,13 @@ gg.editAll("29100400", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast(" M4 Blood Raven OFF ")
 end
+
+
+
+function B2()
+os.exit()
+end
+
 
 while true do
 if gg.isVisible(true) then
