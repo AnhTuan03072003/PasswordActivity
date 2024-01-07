@@ -50,7 +50,7 @@ VIPONLY = gg.multiChoice({
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
-}, nil, "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :- @hmghak\nKHÔNG BẮN BOT - BẮN DƯỚI 10 KILL\nRESET GAME SAU 2 TRẬN\nBẮN DƯỚI 150M")
+}, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then B1() end
@@ -73,13 +73,13 @@ function B1()
 
 
 mainmenu = gg.multiChoice({
-"Suit Karakter ( Permanent ) ",
-"Suit Mummy ( Permanent ) ",
-"Suit Blood Raven ( Permanent ) ",
-"Suit Droid Red Blue ( Permanent ) ",
-"Suit Droid Godzilla ( Permanent ) ",
-"Suit Snow Man ( Permanent ) ",
-"Suit Buaya ( Permanent ) ",
+"Suit Mummy ( Sảnh ) ",
+"Suit Blood Raven ( Sảnh ) ",
+"Suit Firoe X-Suit ( Sảnh ) ",
+"Suit Marmoris X-Suit ( Sảnh ) ",
+"Suit Buaya ( Sảnh ) ",
+"Ak Băng (Bật Đảo Chờ)",
+"Ak Băng (Tắt Top 1 Hoặc Chết)",
 "M4 Băng (Bật Đảo Chờ)",
 "M4 Băng (Tắt Top 1 Hoặc Chết)",
 "M4 Blood Raven (Bật Đảo Chờ)",
@@ -87,15 +87,15 @@ mainmenu = gg.multiChoice({
 "Combo 1 (Bật Đảo Chờ) ",
 "Combo 1 (Tắt Top 1 Hoặc Chết)",
 
-}, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
+}, nil, "")
 if mainmenu == nil then hide = -1 else
 if mainmenu [1] == true then Suit1() end 
 if mainmenu [2] == true then Suit2() end 
 if mainmenu [3] == true then Suit3() end 
 if mainmenu [4] == true then Suit4() end 
 if mainmenu [5] == true then Suit5() end 
-if mainmenu [6] == true then Suit6() end 
-if mainmenu [7] == true then Suit7() end 
+if mainmenu [6] == true then akbang1() end 
+if mainmenu [7] == true then akbang2() end 
 if mainmenu [8] == true then m4bang1() end 
 if mainmenu [9] == true then m4bang2() end 
 if mainmenu [10] == true then m4blood1() end 
@@ -266,17 +266,8 @@ gg.toast(" Ump mainan OFF3 ")
 
 end
 
-function Suit1()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1406064", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("Suit Karakter Tos")
-gg.sleep(1700)
-end
 
-function Suit2()
+function Suit1()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -286,7 +277,7 @@ gg.toast("Suit Mummy")
 gg.sleep(1700)
 end
 
-function Suit3()
+function Suit2()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -296,42 +287,28 @@ gg.toast("Suit Blood Raven")
 gg.sleep(1700)
 end
 
+function Suit3()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1407102", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Suit Firoe X-Suit")
+gg.sleep(1700)
+end
+
 function Suit4()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1406123", gg.TYPE_DWORD)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(50000)
+gg.editAll("1406971", gg.TYPE_DWORD)
 gg.clearResults()
-gg.toast("Suit Droid Red Blue")
+gg.toast("Suit Marmoris X-Suit")
 gg.sleep(1700)
 end
+
 
 function Suit5()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1405913", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1402883", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("Suit Droid Godzilla")
-gg.sleep(1700)
-end
-
-function Suit6()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1405838", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("Suit Snow Man")
-gg.sleep(1700)
-end
-
-function Suit7()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -340,6 +317,8 @@ gg.clearResults()
 gg.toast("Suit Buaya")
 gg.sleep(1700)
 end
+
+
 
 function m4bang1()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -397,6 +376,33 @@ gg.clearResults()
 gg.toast(" M4 Glacier OFF ")
 end
 
+function akbang1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("10100100", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1101001089", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("29100100", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010010891", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Akm Glacier On")
+ end
+
+function akbang2()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1101001089", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10100100", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010010891", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("29100100", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Akm Glacier OFF")
+end
 
 function m4blood1()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -469,3 +475,4 @@ if PUBGMH == 1 then
 HOME()
 end
 end
+
