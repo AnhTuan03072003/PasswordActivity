@@ -26,7 +26,7 @@ end
 
 end
 
-pass("t","8fI39EO0tMnje7J2VTZH")
+pass("t","4f3yJk0Pb2NstiGXr1ae")
 
 
 
@@ -34,9 +34,17 @@ pass("t","8fI39EO0tMnje7J2VTZH")
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+
+
+
 so=gg.getRangesList('libanogs.so:bss')[1].start
-py=0x13B0
-setvalue(so+py,4,"h 40 00 00 00")
+py=0xA58
+setvalue(so+py,4,"h 00 46 00 00")
+
+
 
 
 gg.alert("Fix Văng Game √")
@@ -475,4 +483,3 @@ if PUBGMH == 1 then
 HOME()
 end
 end
-
