@@ -47,7 +47,7 @@ setvalue(so+py,4,"h 00 46 00 00")
 
 
 
-gg.alert("Fix Văng Game √")
+gg.alert("Fix Văng Game √\nChơi Từ 1-2 Trận Rồi Reset Game")
 
 
 
