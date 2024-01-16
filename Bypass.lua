@@ -183,15 +183,15 @@ gg.toast(" Bag cactus serif On")
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("10200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1102002090", gg.TYPE_DWORD)
+gg.editAll("1102002030", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("29200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1020020901", gg.TYPE_DWORD)
+gg.editAll("1020020311", gg.TYPE_DWORD)
 gg.clearResults()
-gg.toast(" Ump mainan On3 ")
+gg.toast(" Ump Black Janda On2 ")
 
 end
 
@@ -260,17 +260,17 @@ gg.clearResults()
 gg.toast(" Helm mutan OFF")
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1102002090", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1102002030", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("10200200", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1020020901", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1020020301", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("29200200", gg.TYPE_DWORD)
 gg.clearResults()
-gg.toast(" Ump mainan OFF3 ")
+gg.toast(" Ump Black Janda OFF2 ")
 
 end
 
