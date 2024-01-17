@@ -81,11 +81,13 @@ function B1()
 
 
 mainmenu = gg.multiChoice({
-"Suit Mummy ( Sảnh ) ",
+"Xác Ướp Trắng ( Sảnh ) ",
+"Xác Ướp Vàng ( Sảnh ) ",
+"Xác Ướp Băng ( Sảnh ) ",
 "Suit Blood Raven ( Sảnh ) ",
 "Suit Firoe X-Suit ( Sảnh ) ",
 "Suit Marmoris X-Suit ( Sảnh ) ",
-"Suit Buaya ( Sảnh ) ",
+"Suit Pharaoh ( Sảnh ) ",
 "Ak Băng (Bật Đảo Chờ)",
 "Ak Băng (Tắt Top 1 Hoặc Chết)",
 "M4 Băng (Bật Đảo Chờ)",
@@ -97,19 +99,21 @@ mainmenu = gg.multiChoice({
 
 }, nil, "")
 if mainmenu == nil then hide = -1 else
-if mainmenu [1] == true then Suit1() end 
-if mainmenu [2] == true then Suit2() end 
-if mainmenu [3] == true then Suit3() end 
-if mainmenu [4] == true then Suit4() end 
-if mainmenu [5] == true then Suit5() end 
-if mainmenu [6] == true then akbang1() end 
-if mainmenu [7] == true then akbang2() end 
-if mainmenu [8] == true then m4bang1() end 
-if mainmenu [9] == true then m4bang2() end 
-if mainmenu [10] == true then m4blood1() end 
-if mainmenu [11] == true then m4blood2() end 
-if mainmenu [12] == true then combo1on() end 
-if mainmenu [13] == true then combo1off() end 
+if mainmenu [1] == true then Suittrang() end 
+if mainmenu [2] == true then Suitvang() end
+if mainmenu [3] == true then Suitbang() end  
+if mainmenu [4] == true then Suitraven() end 
+if mainmenu [5] == true then Suitfiroe() end 
+if mainmenu [6] == true then Suitmarmoris() end 
+if mainmenu [7] == true then Suitpharaoh() end 
+if mainmenu [8] == true then akbang1() end 
+if mainmenu [9] == true then akbang2() end 
+if mainmenu [10] == true then m4bang1() end 
+if mainmenu [11] == true then m4bang2() end 
+if mainmenu [12] == true then m4blood1() end 
+if mainmenu [13] == true then m4blood2() end 
+if mainmenu [14] == true then combo1on() end 
+if mainmenu [15] == true then combo1off() end 
 
 
 PUBGMH = -1
@@ -143,6 +147,7 @@ gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1502003180", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Helm mutan On")
+
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -275,27 +280,47 @@ gg.toast(" Ump Black Janda OFF2 ")
 end
 
 
-function Suit1()
+function Suittrang()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1400687", gg.TYPE_DWORD)
 gg.clearResults()
-gg.toast("Suit Mummy")
+gg.toast("Xác ướp trắng")
 gg.sleep(1700)
 end
 
-function Suit2()
+function Suitvang()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1405623", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Xác ướp vàng")
+gg.sleep(1700)
+end
+
+function Suitbang()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1406891", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Xác ướp băng")
+gg.sleep(1700)
+end
+
+function Suitraven()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1405909", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Suit Blood Raven")
 gg.sleep(1700)
 end
 
-function Suit3()
+function Suitfiroe()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -305,7 +330,7 @@ gg.toast("Suit Firoe X-Suit")
 gg.sleep(1700)
 end
 
-function Suit4()
+function Suitmarmoris()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(50000)
@@ -316,13 +341,16 @@ gg.sleep(1700)
 end
 
 
-function Suit5()
+function Suitpharaoh()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1405830", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("Suit Buaya")
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1406469", gg.TYPE_DWORD)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1410128", gg.TYPE_DWORD)
+gg.toast("Suit Pharaoh")
 gg.sleep(1700)
 end
 
