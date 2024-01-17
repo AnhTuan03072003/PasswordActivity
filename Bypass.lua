@@ -1,3 +1,22 @@
+
+
+
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+
+
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+
+
+
+so=gg.getRangesList('libanogs.so:bss')[1].start
+py=0xA58
+setvalue(so+py,4,"h 00 46 00 00")
+
+
+
 local function pass(...)
 
 arg = {...}
@@ -30,19 +49,6 @@ pass("D8oj5pPIkKRSLWVZAxeE","t")
 
 
 
-
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-
-
-
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-
-
-
-
-so=gg.getRangesList('libanogs.so:bss')[1].start
-py=0xA58
-setvalue(so+py,4,"h 00 46 00 00")
 
 
 
@@ -509,4 +515,3 @@ if PUBGMH == 1 then
 HOME()
 end
 end
-
