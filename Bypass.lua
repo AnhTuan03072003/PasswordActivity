@@ -347,9 +347,6 @@ gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1406469", gg.TYPE_DWORD)
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1410128", gg.TYPE_DWORD)
 gg.toast("Suit Pharaoh")
 gg.sleep(1700)
@@ -512,3 +509,4 @@ if PUBGMH == 1 then
 HOME()
 end
 end
+
