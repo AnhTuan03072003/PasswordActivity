@@ -138,10 +138,9 @@ function S_Pointer(t_So, t_Offset, _bit)
 	return _A
 end
 
---自改锁帧 3.0.0
 
-OP=gg.prompt({'建议90-144'},{[1]='144'},{[1]='number'})--锁帧
-	if OP == nil or OP[1] == '' or OP[1] == '0' then gg.toast("取消")
+OP=gg.prompt({'Chọn 90-144'},{[1]='144'},{[1]='number'})
+	if OP == nil or OP[1] == '' or OP[1] == '0' then gg.alert("Đã Xong")
 		else
 local t = {"libUE4.so:bss", "Cb"}
 local tt = {0x49DD98, 0x88, 0x174}
