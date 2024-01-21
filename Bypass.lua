@@ -8,9 +8,6 @@ setvalue(so+py,4,"64")
 so=gg.getRangesList('libanogs.so:bss')[1].start
 py=0x708
 setvalue(so+py,4,"64")
-so=gg.getRangesList('libanogs.so:bss')[1].start
-py=0xA58
-setvalue(so+py,4,"64")
 
 
 
