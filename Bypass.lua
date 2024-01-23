@@ -4,7 +4,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 
 so=gg.getRangesList('libanogs.so:bss')[1].start
 py=0x9C8
-setvalue(so+py,4,"4096")
+setvalue(so+py,4, 4096)
 
 
 
@@ -49,19 +49,23 @@ pass("YCUZKloPfIvpVJ9Rrc6G","t")
 gg.alert("Fix Văng Game √\nChơi Từ 1-2 Trận Rồi Reset Game")
 
 
-
+Arm64Cross = off
+on = "Tắt"
+off = " Bật"
 
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
+"Tâm +",
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
 }, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
 
 if VIPONLY == nil then else
-if VIPONLY[1]== true then B1() end
- if VIPONLY[2]== true then B2() end
+if VIPONLY[1]== true then Arm64Crosshair() end
+if VIPONLY[2]== true then B1() end
+ if VIPONLY[3]== true then B2() end
 
 
 
@@ -71,7 +75,20 @@ end
 
 
 
-
+function Arm64Crosshair()
+if Arm64Cross == off then
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x54E7870
+setvalue(so+py,4, 505425152)
+gg.toast("Activated")
+Arm64Cross = on
+else
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x54E7870
+setvalue(so+py,4, 505481216)
+gg.toast("Deactive")
+Arm64Cross = off
+end end
 
 function B1()
 
