@@ -56,7 +56,7 @@ off = " Bật"
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"Tâm +",
+"Tâm +"..Arm64Cross,
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
