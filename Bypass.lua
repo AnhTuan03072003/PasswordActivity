@@ -1,4 +1,13 @@
+function edit(orig,ret)_om=orig[1].memory or orig[1][1]_ov=orig[3].value or orig[3][1]_on=orig[2].name or orig[2][1]gg.clearResults()gg.setRanges(_om)gg.searchNumber(_ov,orig[3].type or orig[3][2])sz=gg.getResultCount()if sz<1 then gg.toast(_on.."Failed to Open")else sl=gg.getResults(11082001)for i=1,sz do ist=true for v=4,#orig do if ist==true and sl[i].value==_ov then cd={{}}cd[1].address=sl[i].address+(orig[v].offset or orig[v][2])cd[1].flags=orig[v].type or orig[v][3]szpy=gg.getValues(cd)cdlv=orig[v].lv or orig[v][1]cdv=szpy[1].value if cdlv==cdv then pdjg=true ist=true else pdjg=false ist=false end end end if pdjg==true then szpy=sl[i].address for x=1,#(ret)do xgpy=szpy+(ret[x].offset or ret[x][2])xglx=ret[x].type or ret[x][3]xgsz=ret[x].value or ret[x][1]xgdj=ret[x].freeze or ret[x][4]xgsj={{address=xgpy,flags=xglx,value=xgsz}}if xgdj==true then xgsj[1].freeze=xgdj gg.addListItems(xgsj)else gg.setValues(xgsj)end end xgjg=true end end if xgjg==true then gg.toast(_on.."Successfully Opened")else gg.toast(_on.."Failed to Open")end end end
 
+--¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 2
+function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end
+
+--¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 3
+function libBase(offset, type, value, name) a = os.clock() gg.setValues({ [1] = { address = gg.getRangesList('libUE4.so' or 'libtersafe.so')[1].start + offset, flags = type, value = value}}) b = os.clock() - a gg.toast(name .. ' мσ∂ιfιє∂ nιи '..b) end
+
+--¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 4
+function SearchWrite(Search, Write, Type) gg.clearResults() gg.setVisible(false) gg.searchNumber(Search[1][1], Type) local count = gg.getResultCount() local result = gg.getResults(count) gg.clearResults() local data = {} local base = Search[1][2] if (count > 0) then for i, v in ipairs(result) do v.isUseful = true end for k=2, #Search do local tmp = {} local offset = Search[k][2] - base local num = Search[k][1] for i, v in ipairs(result) do tmp[#tmp+1] = {} tmp[#tmp].address = v.address + offset tmp[#tmp].flags = v.flags end tmp = gg.getValues(tmp) for i, v in ipairs(tmp) do if ( tostring(v.value) ~= tostring(num) ) then result[i].isUseful = false  end end end for i, v in ipairs(result) do if (v.isUseful) then data[#data+1] = v.address end end if (#data > 0) then gg.toast(""..#data.."") local t = {} local base = Search[1][2] for i=1, #data do for k, w in ipairs(Write) do offset = w[2] - base t[#t+1] = {} t[#t].address = data[i] + offset t[#t].flags = Type t[#t].value = w[1] if (w[3] == true) then local item = {} item[#item+1] = t[#t] item[#item].freeze = true gg.addListItems(item) end end end gg.setValues(t) else gg.toast("Not Found !", false) return false end else return false end end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
@@ -49,23 +58,22 @@ pass("YCUZKloPfIvpVJ9Rrc6G","t")
 gg.alert("Fix Văng Game √\nChơi Từ 1-2 Trận Rồi Reset Game")
 
 
-Arm64Cross = off
-on = "Tắt"
-off = " Bật"
 
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"Tâm +"..Arm64Cross,
+"Tâm cộng - On", 
+"Tâm cộng - Off", 
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
 }, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
 
 if VIPONLY == nil then else
-if VIPONLY[1]== true then Arm64Crosshair() end
-if VIPONLY[2]== true then B1() end
- if VIPONLY[3]== true then B2() end
+if VIPONLY[1]== true then Arm64CrosshairON() end
+if VIPONLY[2]== true then Arm64CrosshairOFF() end
+if VIPONLY[3]== true then B1() end
+ if VIPONLY[4]== true then B2() end
 
 
 
@@ -75,25 +83,24 @@ end
 
 
 
-function Arm64Crosshair()
-if Arm64Cross == off then
+function Arm64CrosshairON()
 so=gg.getRangesList("libUE4.so")[1].start
 py=0x54E7870
 setvalue(so+py,4, 505425152)
 gg.toast("Activated")
-Arm64Cross = on
-else
+end
+
+function Arm64CrosshairOFF()
 so=gg.getRangesList("libUE4.so")[1].start
 py=0x54E7870
 setvalue(so+py,4, 505481216)
 gg.toast("Deactive")
-Arm64Cross = off
-end end
+end
+
+
+
 
 function B1()
-
-
-
 mainmenu = gg.multiChoice({
 "Xác Ướp Trắng ( Đảo Chờ ) ",
 "Xác Ướp Vàng ( Đảo Chờ ) ",
