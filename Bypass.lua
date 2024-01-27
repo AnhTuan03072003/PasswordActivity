@@ -14,8 +14,9 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 so=gg.getRangesList('libanogs.so:bss')[1].start
 py=0xA58
 setvalue(so+py,4, 4096)
-py=0x2828
-setvalue(so+py,4, 16512)
+so=gg.getRangesList('libanogs.so:bss')[1].start
+py=0xCDC5C
+setvalue(so+py,4, "h 00 00 80 D2 C0 03 5F D6")
 
 
 
