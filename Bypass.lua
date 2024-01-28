@@ -1,12 +1,4 @@
-function edit(orig,ret)_om=orig[1].memory or orig[1][1]_ov=orig[3].value or orig[3][1]_on=orig[2].name or orig[2][1]gg.clearResults()gg.setRanges(_om)gg.searchNumber(_ov,orig[3].type or orig[3][2])sz=gg.getResultCount()if sz<1 then gg.toast(_on.."Failed to Open")else sl=gg.getResults(11082001)for i=1,sz do ist=true for v=4,#orig do if ist==true and sl[i].value==_ov then cd={{}}cd[1].address=sl[i].address+(orig[v].offset or orig[v][2])cd[1].flags=orig[v].type or orig[v][3]szpy=gg.getValues(cd)cdlv=orig[v].lv or orig[v][1]cdv=szpy[1].value if cdlv==cdv then pdjg=true ist=true else pdjg=false ist=false end end end if pdjg==true then szpy=sl[i].address for x=1,#(ret)do xgpy=szpy+(ret[x].offset or ret[x][2])xglx=ret[x].type or ret[x][3]xgsz=ret[x].value or ret[x][1]xgdj=ret[x].freeze or ret[x][4]xgsj={{address=xgpy,flags=xglx,value=xgsz}}if xgdj==true then xgsj[1].freeze=xgdj gg.addListItems(xgsj)else gg.setValues(xgsj)end end xgjg=true end end if xgjg==true then gg.toast(_on.."Successfully Opened")else gg.toast(_on.."Failed to Open")end end end
 
---¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 2
-function setvalue(address,flags,value)  local refinevalues={}  refinevalues[1]={}  refinevalues[1].address=address  refinevalues[1].flags=flags  refinevalues[1].value=value  gg.setValues(refinevalues)  end
-
---¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 3
-function libBase(offset, type, value, name) a = os.clock() gg.setValues({ [1] = { address = gg.getRangesList('libUE4.so' or 'libtersafe.so')[1].start + offset, flags = type, value = value}}) b = os.clock() - a gg.toast(name .. ' мσ∂ιfιє∂ nιи '..b) end
-
---¢нαииєℓ fαιяℓу вαѕє ℓσα∂єя νєяѕισи 4
 function SearchWrite(Search, Write, Type) gg.clearResults() gg.setVisible(false) gg.searchNumber(Search[1][1], Type) local count = gg.getResultCount() local result = gg.getResults(count) gg.clearResults() local data = {} local base = Search[1][2] if (count > 0) then for i, v in ipairs(result) do v.isUseful = true end for k=2, #Search do local tmp = {} local offset = Search[k][2] - base local num = Search[k][1] for i, v in ipairs(result) do tmp[#tmp+1] = {} tmp[#tmp].address = v.address + offset tmp[#tmp].flags = v.flags end tmp = gg.getValues(tmp) for i, v in ipairs(tmp) do if ( tostring(v.value) ~= tostring(num) ) then result[i].isUseful = false  end end end for i, v in ipairs(result) do if (v.isUseful) then data[#data+1] = v.address end end if (#data > 0) then gg.toast(""..#data.."") local t = {} local base = Search[1][2] for i=1, #data do for k, w in ipairs(Write) do offset = w[2] - base t[#t+1] = {} t[#t].address = data[i] + offset t[#t].flags = Type t[#t].value = w[1] if (w[3] == true) then local item = {} item[#item+1] = t[#t] item[#item].freeze = true gg.addListItems(item) end end end gg.setValues(t) else gg.toast("Not Found !", false) return false end else return false end end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
@@ -14,6 +6,8 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 so=gg.getRangesList('libanogs.so:bss')[1].start
 py=0xA58
 setvalue(so+py,4, 4096)
+py=0xA58
+setvalue(so+py,4, 16638)
 
 
 
@@ -143,158 +137,135 @@ function combo1on()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("502001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1502001180", gg.TYPE_DWORD)
+gg.editAll("1502003014", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("502004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1502001180", gg.TYPE_DWORD)
+gg.editAll("1502003014", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("502002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1502002180", gg.TYPE_DWORD)
+gg.editAll("1502003014", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("502005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1502002180", gg.TYPE_DWORD)
+gg.editAll("1502003014", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("502003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1502003180", gg.TYPE_DWORD)
+gg.editAll("1502003014", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Helm mutan On")
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501001199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501001199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501002199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501002199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501003199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("501006", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1501003199", gg.TYPE_DWORD)
+gg.editAll("1501003174", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast(" Bag cactus serif On")
 
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("10200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1102002030", gg.TYPE_DWORD)
-gg.clearResults()
 
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("29200200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1020020311", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast(" Ump Black Janda On2 ")
 
 end
 
 function combo1off()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501001199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501001", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501001199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501004", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501002199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501002", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501002199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501005", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501003199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501003", gg.TYPE_DWORD)
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1501003199", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("501006", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast("Bag cactus serif OFF")
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1502001180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502001", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1502001180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502004", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1502002180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502002", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1502002180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502005", gg.TYPE_DWORD)
 gg.clearResults()
 
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1502003180", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("502003", gg.TYPE_DWORD)
 gg.clearResults()
 gg.toast(" Helm mutan OFF")
 
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1102002030", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("10200200", gg.TYPE_DWORD)
-gg.clearResults()
-
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1020020301", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("29200200", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast(" Ump Black Janda OFF2 ")
 
 end
 
