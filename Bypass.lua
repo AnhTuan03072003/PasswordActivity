@@ -57,7 +57,7 @@ VIPONLY = gg.multiChoice({
 "Tâm cộng - On", 
 "Tâm cộng - Off", 
 "Wide View On",
-"Wide View Off
+"Wide View Off",
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
