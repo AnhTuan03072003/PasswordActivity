@@ -80,14 +80,14 @@ end
 function Arm64WideViewON()
 so=gg.getRangesList("libUE4.so")[1].start
 py=0x334BE48
-setvalue(so+py,4, 1.3)
+setvalue(so+py,16, 1.5)
 gg.toast("Activated")
 end
 
 function Arm64WideViewOFF()
 so=gg.getRangesList("libUE4.so")[1].start
 py=0x334BE48
-setvalue(so+py,4, 1.0)
+setvalue(so+py,16, 1.0)
 gg.toast("Deactive")
 end
 
