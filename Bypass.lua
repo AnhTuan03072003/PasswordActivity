@@ -56,6 +56,8 @@ function HOME()
 VIPONLY = gg.multiChoice({
 "Tâm cộng - On", 
 "Tâm cộng - Off", 
+"Wide View On",
+"Wide View Off
 "Menu Skin Mod",
 "Thoát Menu Nếu Lag",
 
@@ -64,13 +66,29 @@ VIPONLY = gg.multiChoice({
 if VIPONLY == nil then else
 if VIPONLY[1]== true then Arm64CrosshairON() end
 if VIPONLY[2]== true then Arm64CrosshairOFF() end
-if VIPONLY[3]== true then B1() end
- if VIPONLY[4]== true then B2() end
+if VIPONLY[3]== true then Arm64WideViewON() end
+if VIPONLY[4]== true then Arm64WideViewOFF() end
+if VIPONLY[5]== true then B1() end
+ if VIPONLY[6]== true then B2() end
 
 
 
 end
 PUBGMH = -1
+end
+
+function Arm64WideViewON()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x334BE48
+setvalue(so+py,4, 1.4)
+gg.toast("Activated")
+end
+
+function Arm64WideViewOFF()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x334BE48
+setvalue(so+py,4, 1.0)
+gg.toast("Deactive")
 end
 
 
