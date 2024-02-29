@@ -29,6 +29,466 @@ end
 pass("XtKeNYF86iSCuJ0a7pR2","t")
 
 
+HOME = 1
+function HOME()
+VIPONLY = gg.multiChoice({
+"Tâm cộng - On", 
+"Tâm cộng - Off", 
+"Wide View On",
+"Wide View Off",
+"Menu Skin Mod",
+"Thoát Menu Nếu Lag",
+
+}, nil, "Vui Lòng Tải Full Tài Nguyên Game\nMod Súng - Balo - Mũ Phải Tắt Và Bật Lại Khi Bắt Đầu Trận Mới\n⚠️ KHÔNG SỬ DỤNG MOD SKIN VÀO ACC CHÍNH ⚠️")
+
+if VIPONLY == nil then else
+if VIPONLY[1]== true then Arm64CrosshairON() end
+if VIPONLY[2]== true then Arm64CrosshairOFF() end
+if VIPONLY[3]== true then Arm64WideViewON() end
+if VIPONLY[4]== true then Arm64WideViewOFF() end
+if VIPONLY[5]== true then B1() end
+ if VIPONLY[6]== true then B2() end
+
+
+
+end
+PUBGMH = -1
+end
+
+function Arm64WideViewON()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x334BE48
+setvalue(so+py,16, 1.4)
+gg.toast("Activated")
+end
+
+function Arm64WideViewOFF()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x334BE48
+setvalue(so+py,16, 1.0)
+gg.toast("Deactive")
+end
+
+
+
+function Arm64CrosshairON()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x54E7870
+setvalue(so+py,4, 505425152)
+gg.toast("Activated")
+end
+
+function Arm64CrosshairOFF()
+so=gg.getRangesList("libUE4.so")[1].start
+py=0x54E7870
+setvalue(so+py,4, 505481216)
+gg.toast("Deactive")
+end
+
+function B1()
+mainmenu = gg.multiChoice({
+"Xác Ướp Trắng ( Đảo Chờ ) ",
+"Xác Ướp Vàng ( Đảo Chờ ) ",
+"Xác Ướp Băng ( Đảo Chờ ) ",
+"Suit Blood Raven ( Đảo Chờ ) ",
+"Suit Firoe X-Suit ( Đảo Chờ ) ",
+"Suit Marmoris X-Suit ( Đảo Chờ ) ",
+"Suit Pharaoh ( Đảo Chờ ) ",
+"Ak Băng (Bật Đảo Chờ)",
+"Ak Băng (Tắt Top 1 Hoặc Chết)",
+"M4 Băng (Bật Đảo Chờ)",
+"M4 Băng (Tắt Top 1 Hoặc Chết)",
+"M4 Blood Raven (Bật Đảo Chờ)",
+"M4 Blood Raven (Tắt Top 1 Hoặc Chết)",
+"Combo 1 (Bật Đảo Chờ) ",
+"Combo 1 (Tắt Top 1 Hoặc Chết)",
+
+}, nil, "")
+if mainmenu == nil then hide = -1 else
+if mainmenu [1] == true then Suittrang() end 
+if mainmenu [2] == true then Suitvang() end
+if mainmenu [3] == true then Suitbang() end  
+if mainmenu [4] == true then Suitraven() end 
+if mainmenu [5] == true then Suitfiroe() end 
+if mainmenu [6] == true then Suitmarmoris() end 
+if mainmenu [7] == true then Suitpharaoh() end 
+if mainmenu [8] == true then akbang1() end 
+if mainmenu [9] == true then akbang2() end 
+if mainmenu [10] == true then m4bang1() end 
+if mainmenu [11] == true then m4bang2() end 
+if mainmenu [12] == true then m4blood1() end 
+if mainmenu [13] == true then m4blood2() end 
+if mainmenu [14] == true then combo1on() end 
+if mainmenu [15] == true then combo1off() end 
+
+
+PUBGMH = -1
+end
+end
+
+function combo1on()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003014", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003014", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003014", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003014", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("502003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1502003014", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Helm mutan On")
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501001", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501004", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501002", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501005", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501003", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("501006", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1501003174", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Bag cactus serif On")
+end
+
+function combo1off()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501001", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501004", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501002", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501005", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501003", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1501003174", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("501006", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Bag cactus serif OFF")
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502001", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502004", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502002", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502005", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1502003014", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("502003", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" Helm mutan OFF")
+end
+
+
+
+function Suittrang()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1400687", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Xác ướp trắng")
+gg.sleep(1700)
+end
+
+function Suitvang()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1405623", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Xác ướp vàng")
+gg.sleep(1700)
+end
+
+function Suitbang()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1406891", gg.TYPE_DWORD)
+gg.editAll("1410436", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Xác ướp băng")
+gg.sleep(1700)
+end
+
+function Suitraven()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1405909", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Suit Blood Raven")
+gg.sleep(1700)
+end
+
+function Suitfiroe()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1407102", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Suit Firoe X-Suit")
+gg.sleep(1700)
+end
+
+function Suitmarmoris()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(50000)
+gg.editAll("1406971", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Suit Marmoris X-Suit")
+gg.sleep(1700)
+end
+
+
+function Suitpharaoh()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1400129", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1406469", gg.TYPE_DWORD)
+gg.editAll("1410128", gg.TYPE_DWORD)
+gg.toast("Suit Pharaoh")
+gg.sleep(1700)
+end
+
+function m4bang1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("10100400", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1101004046", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("20300800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010040462", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("20500500", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010040463", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("29100400", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010040461", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" M4 Glacier On ")
+end
+
+
+function m4bang2()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.setVisible(false)
+gg.searchNumber("1101004046", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10100400", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010040462", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("20300800", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010040463", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("20500500", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010040461", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("29100400", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" M4 Glacier OFF ")
+end
+
+function akbang1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("10100100", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1101001089", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("29100100", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010010891", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Akm Glacier On")
+ end
+
+function akbang2()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1101001089", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10100100", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010010891", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("29100100", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("Akm Glacier OFF")
+end
+
+function m4blood1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("10100400", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1101004154", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("20300800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010041542", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("20500500", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010041543", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("29100400", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1010041541", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" M4 Blood Raven On")
+end
+
+function m4blood2()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.setVisible(false)
+gg.searchNumber("1101004154", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10100400", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010041542", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("20300800", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010041543", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("20500500", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1010041541", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(50000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("29100400", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast(" M4 Blood Raven OFF ")
+end
+
+
+
+function B2()
+os.exit()
+end
+
+
+while true do
+if gg.isVisible(true) then
+PUBGMH = 1
+gg.setVisible(false)
+end
+if PUBGMH == 1 then
+HOME()
+end
+end
+
+
+
 
 
 
