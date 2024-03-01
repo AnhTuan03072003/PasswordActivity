@@ -28,6 +28,8 @@ end
 
 pass("XtKeNYF86iSCuJ0a7pR2","t")
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
 so=gg.getRangesList('libanogs.so:bss')[1].start
 py=0x9C8
 setvalue(so+py,4, 16638)
