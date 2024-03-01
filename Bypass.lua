@@ -28,6 +28,9 @@ end
 
 pass("XtKeNYF86iSCuJ0a7pR2","t")
 
+so=gg.getRangesList('libanogs.so:bss')[1].start
+py=0x9C8
+setvalue(so+py,4, 16638)
 
 HOME = 1
 function HOME()
