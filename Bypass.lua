@@ -88,10 +88,13 @@ function S_Pointer(t_So, t_Offset, _bit)
 end
 
 
+
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x9C8}
 local ttt = S_Pointer(t, tt, true)
-gg.setValues({{address = ttt, flags = 4, value = 16638}})
+gg.addListItems({{address = ttt, flags = 4, value = 16638, freeze = false}})
+
+
 
 gg.alert("Fix Văng Game √\nChơi Từ 1-2 Trận Rồi Reset Game")
 
