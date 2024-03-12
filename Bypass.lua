@@ -92,7 +92,7 @@ end
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x9C8}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 16638, freeze = false}})
+gg.addListItems({{address = ttt, flags = 4, value = 16638}})
 
 
 
