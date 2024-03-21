@@ -189,6 +189,6 @@ local tt = {0x4E8}
 local ttt = S_Pointer(t, tt, true)
 gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
-
+gg.alert("Fix Văng Thành Công")
 
 	
