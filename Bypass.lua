@@ -228,7 +228,7 @@ VIPONLY = gg.multiChoice({
 "Wide View Off",
 "Thoát Menu Nếu Lag",
 
-}, nil, "")
+}, nil, "⚠️ Memory SDK KHÔNG AN TOÀN ⚠️")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then Arm64CrosshairON() end
