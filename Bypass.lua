@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmgcheat_5h_freetest","t")
+pass("hmghakk_24_Uebr73y3bd","t")
 
 
 
