@@ -26,7 +26,7 @@ end
 
 end
 
-pass("hmghakk_24_Uebr73y3bd","t")
+pass("hmghakk24Uebr73y3bd","t")
 
 
 
