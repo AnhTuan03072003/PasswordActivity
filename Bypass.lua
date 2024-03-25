@@ -102,6 +102,7 @@ gg.addListItems({{address = ttt, flags = 4, value = 4096, freeze = true}})
 
 gg.alert("Fix Văng + Bypass Logo Thành Công")
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 HOME = 1
 function HOME()
@@ -127,8 +128,7 @@ end
 
 
 function ON()
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-so=gg.getRangesList('libgcloud.so')[1].start
+	so=gg.getRangesList('libgcloud.so')[1].start
 gg.setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
 gg.alert("Bypass Island ON")
 end
