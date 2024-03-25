@@ -33,48 +33,6 @@ so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
 
 so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x367BDC" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x344308" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x3441B0" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x3429F8" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E138" , 4, "h 8E 70 04 9F 10 12 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E124" , 4, "h 8E 70 04 9F 10 10 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E110" , 4, "h 8E 70 04 9F 10 12 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0FC" , 4, "h 8E 70 04 9F 10 14 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0D4" , 4, "h 8E 70 04 9F 10 17 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0C0" , 4, "h 8E 70 04 9F 10 18 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0AC" , 4, "h 8E 70 04 9F 10 19 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E054" , 4, "h 8E 70 04 9F 00 14 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D664" , 4, "h 8E 70 04 9F 10 12 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D63C" , 4, "h 8E 70 04 9F 10 10 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D628" , 4, "h 8E 70 04 9F 10 12 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D600" , 4, "h 8E 70 04 9F 10 14 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2E9DF8" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2A8A08" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2A6D70" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x250F1C" , 4, "h 8E 70 04 9F 80 50 00 19")
-
-
-so=gg.getRangesList('libanogs.so')[1].start
 setvalue(so + "0x78FF6CB8" , 4, "h 00 04 6F 80")
 so=gg.getRangesList('libanogs.so')[1].start
 setvalue(so + "0x78FF6CBC" , 4, "h 00 04 6F 80")
@@ -200,46 +158,7 @@ setvalue(so + "0x7E1EBF0474" , 4, "h 00 04 6F 80")
 so=gg.getRangesList('libanogs.so')[1].start
 setvalue(so + "0x7E1EBF0478" , 4, "h 00 04 6F 80")
 
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x367BDC" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x344308" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x3441B0" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x3429F8" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E138" , 4, "h 8E 70 04 9F 10 12 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E124" , 4, "h 8E 70 04 9F 10 10 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E110" , 4, "h 8E 70 04 9F 10 12 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0FC" , 4, "h 8E 70 04 9F 10 14 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0D4" , 4, "h 8E 70 04 9F 10 17 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0C0" , 4, "h 8E 70 04 9F 10 18 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E0AC" , 4, "h 8E 70 04 9F 10 19 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33E054" , 4, "h 8E 70 04 9F 00 14 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D664" , 4, "h 8E 70 04 9F 10 12 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D63C" , 4, "h 8E 70 04 9F 10 10 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D628" , 4, "h 8E 70 04 9F 10 12 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x33D600" , 4, "h 8E 70 04 9F 10 14 10 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2E9DF8" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2A8A08" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x2A6D70" , 4, "h 8E 70 04 9F 80 50 00 19")
-so=gg.getRangesList('libanogs.so')[1].start
-setvalue(so + "0x250F1C" , 4, "h 8E 70 04 9F 80 50 00 19")
+
 
 gg.alert("Fix Văng Thành Công")
 
