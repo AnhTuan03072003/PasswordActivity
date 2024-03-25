@@ -29,7 +29,13 @@ end
 pass("OMsSugh8xVq7Cl1Ua6RW","t")
 
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+so=gg.getRangesList('libanogs.so:bss')[1].start
+setvalue(so + 0x4E8, 4, 64)
 
+gg.alert("Fix Văng Thành Công")
+
+	
 
 
 
