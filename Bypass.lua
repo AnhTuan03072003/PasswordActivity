@@ -109,8 +109,7 @@ VIPONLY = gg.multiChoice({
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
-
-}, nil, " ")
+}, nil, "")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then ON() end
@@ -131,12 +130,11 @@ function ON()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 so=gg.getRangesList('libgcloud.so')[1].start
 setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
-
 gg.alerr("Bypass Island ON")
 end
 
-function OFF()
 
+function OFF()
 gg.processKill()
 end
 
