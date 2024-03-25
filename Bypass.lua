@@ -93,7 +93,7 @@ end
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x4E8}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 4096, freeze = true}})
+gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x590}
@@ -103,3 +103,51 @@ gg.addListItems({{address = ttt, flags = 4, value = 4096, freeze = true}})
 gg.alert("Fix Văng + Bypass Logo Thành Công")
 
 
+HOME = 1
+function HOME()
+VIPONLY = gg.multiChoice({
+"BYPASS ISLAND ON", 
+"BYPASS ISLAND OFF",
+
+
+}, nil, " ")
+
+if VIPONLY == nil then else
+if VIPONLY[1]== true then ON() end
+ if VIPONLY[2]== true then OFF() end
+
+
+
+
+end
+PUBGMH = -1
+end
+
+
+
+
+
+function ON()
+
+so=gg.getRangesList('libgcloud.so')[1].start
+setvalue(so + 0x13638C, 4, "C0 03 5F D6")
+
+gg.alerr("Bypass Island ON")
+end
+
+function OFF()
+
+gg.processKill()
+end
+
+
+
+while true do
+if gg.isVisible(true) then
+PUBGMH = 1
+gg.setVisible(false)
+end
+if PUBGMH == 1 then
+HOME()
+end
+end
