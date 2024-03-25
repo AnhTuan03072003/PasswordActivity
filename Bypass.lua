@@ -130,7 +130,7 @@ end
 function ON()
 
 so=gg.getRangesList('libgcloud.so')[1].start
-setvalue(so + 0x13638C, 4, "C0 03 5F D6")
+setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
 
 gg.alerr("Bypass Island ON")
 end
