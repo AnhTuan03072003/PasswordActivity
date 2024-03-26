@@ -36,12 +36,12 @@ pass("OMsSugh8xVq7Cl1Ua6RW","t")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"BYPASS LOGO 2ST",
-   "BYPASS ISLAND ON", 
+"BYPASS LOGO KRAFTON",
+"BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
 
-}, nil, " ")
+}, nil, "")
 
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
