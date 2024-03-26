@@ -104,13 +104,16 @@ gg.alert("Fix Văng + Bypass Logo Thành Công")
 
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
-}, nil, "⚠️ CÂN NHẮC KHI DÙNG AIM BOT ⚠️")
+
+}, nil, " ")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then ON() end
@@ -128,13 +131,14 @@ end
 
 
 function ON()
-	so=gg.getRangesList('libgcloud.so')[1].start
-gg.setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
+
+so=gg.getRangesList('libgcloud.so')[1].start
+setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
 gg.alert("Bypass Island ON")
 end
 
-
 function OFF()
+
 gg.processKill()
 end
 
