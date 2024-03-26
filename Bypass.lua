@@ -36,7 +36,7 @@ pass("Zy8u7mEcFfR54xQzpGr9","t")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"BYPASS LOGO 1 sắp qua 2",
+"BYPASS LOGO 1st sắp qua 2",
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
@@ -58,7 +58,7 @@ end
 function LOGO()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 gg.toast("Load 5 giây")
-  gg.sleep(4999)
+  gg.sleep(1999)
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
 so=gg.getRangesList('libanogs.so:bss')[1].start
