@@ -57,6 +57,8 @@ end
 
 function LOGO()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+gg.alert("Load 5 giây")
+  gg.sleep(4999)
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
 so=gg.getRangesList('libanogs.so:bss')[1].start
