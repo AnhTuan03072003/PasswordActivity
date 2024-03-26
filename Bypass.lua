@@ -41,7 +41,7 @@ VIPONLY = gg.multiChoice({
 "BYPASS ISLAND OFF",
 
 
-}, nil, "")
+}, nil, "Logo 1st thường load ~ 20 giây")
 
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
