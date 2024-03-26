@@ -34,7 +34,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
 so=gg.getRangesList('libanogs.so:bss')[1].start
-setvalue(so + 0x590, 4, 64)
+setvalue(so + 0x590, 4, 4046)
 gg.alert("Fix Văng + Bypass Logo Thành Công")
 
 
