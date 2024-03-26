@@ -113,7 +113,7 @@ VIPONLY = gg.multiChoice({
 "BYPASS ISLAND OFF",
 
 
-}, nil, " ")
+}, nil, "⚠️ Cân nhắc khi sử dụng AIM BOT ⚠️")
 
 if VIPONLY == nil then else
 if VIPONLY[1]== true then ON() end
