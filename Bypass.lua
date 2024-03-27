@@ -60,7 +60,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
-  gg.sleep(4999)
+  gg.sleep(3999)
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x590, 4, 64)
 gg.alert("Fix Văng + Bypass Logo Thành Công")
