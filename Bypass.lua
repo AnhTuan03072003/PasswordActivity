@@ -63,6 +63,9 @@ setvalue(so + 0x4E8, 4, 64)
   
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x590, 4, 64)
+
+  so=gg.getRangesList('libanogs.so:bss')[1].start
+setvalue(so + 0x9C8, 4, 256)
 gg.alert("Fix Văng + Bypass Logo Thành Công")
    
 end
