@@ -36,7 +36,7 @@ pass("XwxsGHScCFb6PIWkEYBu","t")
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"BYPASS LOGO 1 sắp qua 2",
+"BYPASS LOGO THỨ 1",
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
