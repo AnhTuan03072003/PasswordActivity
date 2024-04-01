@@ -37,6 +37,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "BYPASS LOGO THỨ 1",
+"CHECK ANTIBAN",
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
@@ -45,14 +46,27 @@ VIPONLY = gg.multiChoice({
 
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
-if VIPONLY[2]== true then ON() end
- if VIPONLY[3]== true then OFF() end
+    if VIPONLY[2]== true then CHECK() end
+if VIPONLY[3]== true then ON() end
+ if VIPONLY[4]== true then OFF() end
 
 
 
 
 end
 PUBGMH = -1
+end
+
+
+function CHECK()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("67109633", gg.TYPE_DWORD)
+if gg.getResultCount() > 4000 then
+gg.alert("⛔ANTIBAN KHÔNG HOẠT ĐỘNG⛔")
+gg.setVisible(true)
+gg.processKill()
+os.exit()
+end
 end
 
 function LOGO()
