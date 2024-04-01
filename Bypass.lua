@@ -37,7 +37,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "BYPASS LOGO THỨ 1",
-"CHECK ANTIBAN",
+"🛡️CHECK ANTIBAN🛡️",
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
@@ -63,7 +63,6 @@ gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber("67109633", gg.TYPE_DWORD)
 if gg.getResultCount() > 4000 then
 gg.alert("⛔ ANTIBAN KHÔNG HOẠT ĐỘNG ⛔")
-gg.setVisible(true)
 gg.processKill()
 os.exit()
 else
