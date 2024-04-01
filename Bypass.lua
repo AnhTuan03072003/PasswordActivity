@@ -37,7 +37,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "BYPASS LOGO THỨ 1",
-"🛡️CHECK ANTIBAN🛡️",
+"🛡️CHECK ANTIBAN [SẢNH CHỜ]",
 "BYPASS ISLAND ON", 
 "BYPASS ISLAND OFF",
 
