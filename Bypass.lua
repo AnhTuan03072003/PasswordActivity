@@ -62,8 +62,8 @@ function CHECK()
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber("67109633", gg.TYPE_DWORD)
 if gg.getResultCount() > 4000 then
-gg.alert("⛔ ANTIBAN KHÔNG HOẠT ĐỘNG ⛔")
 gg.processKill()
+gg.alert("⛔ ANTIBAN KHÔNG HOẠT ĐỘNG ⛔")
 os.exit()
 else
 gg.setRanges(gg.REGION_C_ALLOC)
