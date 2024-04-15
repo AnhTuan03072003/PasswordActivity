@@ -225,10 +225,8 @@ function LOGO()
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 so=gg.getRangesList('libanogs.so:bss')[1].start
-setvalue(so + 0x4E8, 4, 64)
+setvalue(so + 0x4E8, 4, 1684)
   
-so=gg.getRangesList('libanogs.so:bss')[1].start
-setvalue(so + 0x590, 4, 64)
 
   
 gg.alert("Fix Văng + Bypass Logo Thành Công")
