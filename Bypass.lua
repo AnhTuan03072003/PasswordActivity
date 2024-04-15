@@ -43,7 +43,7 @@ VIPONLY = gg.multiChoice({
 "Thoát Nếu Lag",
 
 
-}, nil, "Logo 1st thường load ~ 20 giây\n⚠️ Reset Game Sau 1-2 Trận Đấu\n⚠️ Vui lòng test acc phụ vài game ⚠️")
+}, nil, "⚠️ Reset Game Sau 1-2 Trận Đấu ⚠️\n⚠️ Vui lòng test acc phụ vài game ⚠️")
 
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
