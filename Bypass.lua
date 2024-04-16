@@ -259,13 +259,39 @@ end
 function LOGO()
 
 
+function setvalue(address, flags, value)
+    local tt = {{address = address, flags = flags, value = value}}
+    gg.setValues(tt)
+end
+
+local gcv_values = {
+0x9251c, 0x9449c, 0x93770, 0x93714, 0x92588, 0x95980, 0x94440, 0x94284, 0x924bc
+}
+local gcvnn_values = {
+0x164038, 0x16cb40, 0x56ea8, 0x56e24, 0x3b860, 0x3bcc0, 0x3c560, 0x3cb90, 0x3cf20
+}
+
+
+local anort = gg.getRangesList('libanort.so')[1].start
+local gcv = gg.getRangesList('libGCloudVoice.so')[1].start
+local gcvnn = gg.getRangesList('libGvoiceNN.so')[1].start
+
+
+
+for _, mmk in ipairs(gcv_values) do
+    setvalue(gcv + mmk, 4, 0)
+end
+
+for _, tempik in ipairs(gcvnn_values) do
+    setvalue(gcvnn + tempik, 4, 0)
+end
+
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x4E8, 4, 64)
 so=gg.getRangesList('libanogs.so:bss')[1].start
 setvalue(so + 0x590, 4, 64)
-
 
 
 
