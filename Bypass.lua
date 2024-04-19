@@ -286,9 +286,7 @@ end
 local gc_values = {
 0x261220, 0x278588
 }
-local ano_values = {
-0x447638
-}
+
 local ue_values = {
    0xC49B230, 0xCB6429C, 0x9654630, 0x9727360, 0xA032744, 0xCBB4328
 }
@@ -299,16 +297,14 @@ local gcvnn_values = {
 0x164038, 0x16cb40, 0x56ea8, 0x56e24, 0x3b860, 0x3bcc0, 0x3c560, 0x3cb90, 0x3cf20
 }
 
-local ano = gg.getRangesList('libanogs.so')[1].start
-local gcv = gg.getRangesList('libGCloudVoice.so')[1].start
+
+	local gcv = gg.getRangesList('libGCloudVoice.so')[1].start
 local gcvnn = gg.getRangesList('libGvoiceNN.so')[1].start
 local gc = gg.getRangesList('libgcloud.so')[1].start
 local ue = gg.getRangesList('libUE4.so')[1].start
 
 
-for _, lonte in ipairs(ano_values) do
-    setvalue(ano + lonte, 4, 0)
-end
+
 
 for _, haik in ipairs(gc_values) do
     setvalue(gc + haik, 32, "h000080D2C0035FD6")
