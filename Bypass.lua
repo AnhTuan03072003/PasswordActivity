@@ -86,7 +86,7 @@ end
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"BYPASS LOGO 1st",
+"FIX VĂNG LOGO 1st",
 "ISLAND ON",
 "ISLAND OFF",
 "Admin",
