@@ -90,7 +90,7 @@ VIPONLY = gg.multiChoice({
 "ISLAND ON",
 "ISLAND OFF",
 "Admin",
-"Thoát Nếu Lag",
+"Thoát Nếu Menu - Không Thoát App",
 
 
 }, nil, "⚠️ Reset Game Sau 1-2 Trận Đấu ⚠️\n⚠️ Vui lòng test acc phụ vài game ⚠️")
