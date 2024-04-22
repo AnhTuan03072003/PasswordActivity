@@ -26,6 +26,118 @@ pass("75qCt1HmjKD3W4a2ZJlr","t")
 
 
 
+
+function S_Pointer(t_So, t_Offset, _bit)
+	local function getRanges()
+		local ranges = {}
+		local t = gg.getRangesList('^/data/*.so*$')
+		for i, v in pairs(t) do
+			if v.type:sub(2, 2) == 'w' then
+				table.insert(ranges, v)
+			end
+		end
+		return ranges
+	end
+	local function Get_Address(N_So, Offset, ti_bit)
+		local ti = gg.getTargetInfo()
+		local S_list = getRanges()
+		local _Q = tonumber(0x0)
+		local t = {}
+		local _t
+		local _S = nil
+		if ti_bit then
+			_t = 32
+		 else
+			_t = 4
+		end
+		for i in pairs(S_list) do
+			local _N = S_list[i].internalName:gsub('^.*/', '')
+			if N_So[1] == _N and N_So[2] == S_list[i].state then
+				_S = S_list[i]
+				break
+			end
+		end
+		if _S then
+			t[#t + 1] = {}
+			t[#t].address = _S.start + Offset[1]
+			t[#t].flags = _t
+			if #Offset ~= 1 then
+				for i = 2, #Offset do
+					local S = gg.getValues(t)
+					t = {}
+					for _ in pairs(S) do
+						if not ti.x64 then
+							S[_].value = S[_].value & 0xFFFFFFFF
+						end
+						t[#t + 1] = {}
+						t[#t].address = S[_].value + Offset[i]
+						t[#t].flags = _t
+					end
+				end
+			end
+			_S = t[#t].address
+			print(string.char(231,190,164,58).._Q)
+		end
+		return _S
+	end
+	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
+	return _A
+end
+
+
+function xqmnb(Search,Modification)
+   gg.clearResults()
+   gg.setRanges(Search[1].memory)
+   gg.searchNumber(Search[3].value,Search[3].type,false,536870912,0,-1)
+   if gg.getResultCount()==0 then
+      gg.toast(Search[2].name..'开启失败')
+      return
+   end
+   local Result=gg.getResults(gg.getResultCount())
+   local sum
+   for index=4,#Search do
+      sum=0
+      for i=1,#Result do
+         if gg.getValues({{address=Result[i].address+Search[index].offset,flags=Search[index].type}})[1].value~=Search[index].lv then
+            Result[i].Usable=true
+            sum=sum+1
+         end
+      end
+      if sum==#Result then
+         gg.toast(Search[2].name..'开启失败')
+         return
+      end
+   end
+   local Data,Freeze,Freezes={},{},0
+   sum=0
+   for index,value in ipairs(Modification)do
+      for index=1,#Result do
+         if not Result[index].Usable then
+            local Value={address=Result[index].address+value.offset,flags=value.type,value=value.value,freeze=true}
+            if value.freeze then
+               Freeze[#Freeze+1]=Value
+               Freezes=Freezes+1
+            else
+               Data[#Data+1]=Value
+            end
+            sum=sum+1
+         end
+      end
+   end
+      gg.setValues(Data)
+      gg.addListItems(Freeze)
+   if Freezes==0 then
+      gg.toast(Search[2].name..'开启成功,共修改'..sum..'条数据')
+   else
+      gg.toast(Search[2].name..'开启成功,共修改'..sum..'条数据,冻结'..Freezes..'条数据')
+   end
+   gg.clearResults()
+end
+
+
+
+
+
 function S_Pointer(t_So, t_Offset, _bit)
 	local function getRanges()
 		local ranges = {}
@@ -82,15 +194,13 @@ function S_Pointer(t_So, t_Offset, _bit)
 	local _A = string.format('0x%X', Get_Address(t_So, t_Offset, _bit))
 	return _A
 end
-
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"FIX VĂNG LOGO 1st",
-"ISLAND ON",
-"ISLAND OFF",
+"FIX VĂNG LOGO KRAFTON",
 "Admin",
-"Thoát Nếu Menu - Không Thoát App",
+"Thoát Nếu Lag",
 
 
 }, nil, "⚠️ Reset Game Sau 1-2 Trận Đấu ⚠️\n⚠️ Vui lòng test acc phụ vài game ⚠️")
@@ -98,37 +208,16 @@ VIPONLY = gg.multiChoice({
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
 
-  if VIPONLY[2]== true then islandon() end
-  if VIPONLY[3]== true then islandoff() end
-     
- if VIPONLY[4]== true then admin() end
+ if VIPONLY[2]== true then admin() end
 
      
- if VIPONLY[5]== true then exitt() end
+ if VIPONLY[3]== true then exitt() end
 
 
 
 
 end
 PUBGMH = -1
-end
-
-
-
-function islandon()
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-  
-so=gg.getRangesList('libgcloud.so')[1].start
-setvalue(so + "0x13638C", 4, "h C0 03 5F D6")
-gg.alert("Bypass Island ON")
-end
-
-function islandoff()
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-  
-so=gg.getRangesList('libgcloud.so')[1].start
-setvalue(so + "0x13638C", 4, "h FF 43 04 D1")
-gg.alert("Bypass Island OFF")
 end
 
 
@@ -276,74 +365,117 @@ end
 
 
 
+function LOBBY()
+function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+
+
+
+gg.setRanges(gg.REGION_OTHER | gg.REGION_C_ALLOC )
+gg.searchNumber("131331;133634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_OTHER | gg.REGION_C_ALLOC )
+gg.searchNumber("131331", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134914;144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134914", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134658;134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("144387;133634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("133378;144387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("133378", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("196864;16842", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("262144;196611", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("262144", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("67371777", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134658;9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("84149249", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("144,387;133634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("133634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("84149249", gg.TYPE_DWORD)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("134658;262403", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.setRanges(gg.REGION_C_ALLOC )
+gg.searchNumber("262403", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("84149249", gg.TYPE_DWORD)
+gg.clearResults()
+
+
+
+
+end
+
+
 function LOGO()
 
-function setvalue(address, flags, value)
-    local tt = {{address = address, flags = flags, value = value}}
-    gg.setValues(tt)
-end
-
-local gc_values = {
-0x261220, 0x278588
-}
-
-local ue_values = {
-   0xC49B230, 0xCB6429C, 0x9654630, 0x9727360, 0xA032744, 0xCBB4328
-}
-local gcv_values = {
-0x9251c, 0x9449c, 0x93770, 0x93714, 0x92588, 0x95980, 0x94440, 0x94284, 0x924bc
-}
-local gcvnn_values = {
-0x164038, 0x16cb40, 0x56ea8, 0x56e24, 0x3b860, 0x3bcc0, 0x3c560, 0x3cb90, 0x3cf20
-}
 
 
-	local gcv = gg.getRangesList('libGCloudVoice.so')[1].start
-local gcvnn = gg.getRangesList('libGvoiceNN.so')[1].start
-local gc = gg.getRangesList('libgcloud.so')[1].start
-local ue = gg.getRangesList('libUE4.so')[1].start
-
-
-
-
-for _, haik in ipairs(gc_values) do
-    setvalue(gc + haik, 32, "h000080D2C0035FD6")
-end
-
-for _, entod in ipairs(ue_values) do
-    setvalue(ue + entod, 4, 0)
-end
-
-for _, mmk in ipairs(gcv_values) do
-    setvalue(gcv + mmk, 4, 0)
-end
-
-for _, tempik in ipairs(gcvnn_values) do
-    setvalue(gcvnn + tempik, 4, 0)
-end
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x4E8}
 local ttt = S_Pointer(t, tt, true)
+  gg.setValues({{address = ttt, flags = 4, value = 4096}})
 
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
+
 
 
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x590}
 local ttt = S_Pointer(t, tt, true)
-gg.addListItems({{address = ttt, flags = 4, value = 64, freeze = true}})
-
-
-
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
-
-function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end
+  gg.setValues({{address = ttt, flags = 4, value = 4096}})
 
 
 
 
-gg.alert("Fix Văng + Bypass Logo Thành Công\n❌ KHÔNG TẮT APP NÀY ĐI NHÉ")
+
+
+
+gg.alert("Fix Văng Thành Công")
    
 end
 
