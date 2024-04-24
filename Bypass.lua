@@ -464,11 +464,6 @@ local ttt = S_Pointer(t, tt, true)
 
 
 
-local t = {"libanogs.so:bss", "Cb"}
-local tt = {0x590}
-local ttt = S_Pointer(t, tt, true)
-  gg.setValues({{address = ttt, flags = 4, value = 4096}})
-
 
 
 
