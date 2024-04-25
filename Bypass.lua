@@ -5,7 +5,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 23/4/2024 "}, {},{"text"})
+({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 25/4/2024 "}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -198,7 +198,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"FIX VĂNG LOGO KRAFTON",
+"FIX VĂNG LOGO 1st",
 "Admin",
 "Thoát Nếu Lag",
 
