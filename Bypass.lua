@@ -459,7 +459,7 @@ function LOGO()
 local t = {"libanogs.so:bss", "Cb"}
 local tt = {0x4E8}
 local ttt = S_Pointer(t, tt, true)
- gg.addListItems({{address = ttt, flags = 4, value = 4096, freeze = true}}) 
+ gg.setValues({{address = ttt, flags = 4, value = 4096}}) 
 
 
 
