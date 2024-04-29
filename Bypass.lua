@@ -1,4 +1,5 @@
 
+
 local function pass(...)
 
 arg = {...}
@@ -198,7 +199,8 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"FIX VĂNG LOGO 1st",
+"FIX VĂNG LOGO KRAFTON",
+"MAGIC BULLET (Sảnh)",
 "Admin",
 "Thoát Nếu Lag",
 
@@ -208,16 +210,30 @@ VIPONLY = gg.multiChoice({
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
 
- if VIPONLY[2]== true then admin() end
+if VIPONLY[2]== true then MAGIC() end
+
+
+ if VIPONLY[3]== true then admin() end
 
      
- if VIPONLY[3]== true then exitt() end
+ if VIPONLY[4]== true then exitt() end
 
 
 
 
 end
 PUBGMH = -1
+end
+
+
+
+
+function MAGIC()
+ gg.setRanges(gg.REGION_ANONYMOUS)
+ gg.searchNumber("69.5;35;33", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.getResults(6)
+ gg.editAll("75;80;80", gg.TYPE_FLOAT)
+gg.clearResults()
 end
 
 
@@ -462,6 +478,12 @@ local ttt = S_Pointer(t, tt, true)
  gg.setValues({{address = ttt, flags = 4, value = 4096}}) 
 
 
+local t = {"libanogs.so:bss", "Cb"}
+local tt = {0x590}
+local ttt = S_Pointer(t, tt, true)
+ gg.setValues({{address = ttt, flags = 4, value = 4096}}) 
+
+
 
 
 
@@ -490,3 +512,8 @@ if PUBGMH == 1 then
 HOME()
 end
 end
+
+
+
+
+
