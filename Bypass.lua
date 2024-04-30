@@ -200,7 +200,7 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "FIX VĂNG LOGO KRAFTON",
-"MAGIC BULLET (Sảnh)",
+"⚠️ MAGIC BULLET (Sảnh) ⚠️",
 "Admin",
 "Thoát Nếu Lag",
 
