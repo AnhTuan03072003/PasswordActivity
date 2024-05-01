@@ -234,6 +234,7 @@ function MAGIC()
  gg.getResults(6)
  gg.editAll("75;80;80", gg.TYPE_FLOAT)
 gg.clearResults()
+	gg.alert("Magic Bullet ✅")
 end
 
 
