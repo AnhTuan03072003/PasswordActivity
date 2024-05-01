@@ -6,7 +6,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 29/4/2024 "}, {},{"text"})
+({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 01/05/2024 "}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
