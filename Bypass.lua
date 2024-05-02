@@ -539,7 +539,7 @@ end
 
 function LOGO()
 
-
+gg.alert("Đừng bật quá sớm sẽ bị treo Logo\nĐợi 1-2s rồi hãy bật")
 
 
 local t = {"libanogs.so:bss", "Cb"}
