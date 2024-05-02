@@ -197,7 +197,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
-"FIX VĂNG LOGO KRAFTON",
+"FIX VĂNG LOGO 1st",
 "BYPASS LOBBY (Sảnh)",
 "⚠️ MAGIC BULLET YẾU (Sảnh) ⚠️",
 "⚠️ MAGIC BULLET MẠNH (Sảnh) ⚠️",
