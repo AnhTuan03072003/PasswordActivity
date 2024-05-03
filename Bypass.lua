@@ -21,7 +21,7 @@ os.exit(gg.alert("Key Sai Hoặc Hết Hạn❎", ""))
 end 
 end
 
-pass("30041975","t")
+pass("L0er8K3741YxfkJHNqIn","t")
 
 
 
