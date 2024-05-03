@@ -5,7 +5,7 @@ arg = {...}
 
 local pas = gg.prompt
 
-({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 01/05/2024 "}, {},{"text"})
+({"Vui Lòng Nhập Key\n🔑KEY ĐÃ RESET: 03/05/2024 "}, {},{"text"})
 
 pas = pas and pas[1] .. " " or os.exit(gg.alert("Thoát... Ấn Oke",""))
 
@@ -539,7 +539,7 @@ end
 
 function LOGO()
 
-gg.alert("Đừng bật quá sớm sẽ bị treo Logo\nĐợi 1-2s rồi hãy bật")
+gg.alert("Đừng bật quá sớm sẽ bị treo Logo\nĐợi 1-2s rồi hãy bật\nKHÔNG BẬT Ở LOGO KRAFTON")
 
 
 local t = {"libanogs.so:bss", "Cb"}
