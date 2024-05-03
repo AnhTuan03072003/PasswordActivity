@@ -243,7 +243,7 @@ end
 function MAGIC2()
 gg.alert("Bật một lần ở sảnh\n⚠️ Nguy Hiểm ⚠️")
 gg.setRanges(gg.REGION_ANONYMOUS)
- gg.searchNumber("25;30,5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+ gg.searchNumber("25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
  gg.getResults(2)
  gg.editAll("120", gg.TYPE_FLOAT)
 gg.clearResults()
