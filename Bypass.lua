@@ -198,7 +198,6 @@ HOME = 1
 function HOME()
 VIPONLY = gg.multiChoice({
 "FIX VĂNG LOGO 1st",
-"BYPASS LOBBY (Sảnh)",
 "⚠️ MAGIC BULLET YẾU (Sảnh) ⚠️",
 "⚠️ MAGIC BULLET MẠNH (Sảnh) ⚠️",
 "Admin",
@@ -208,16 +207,15 @@ VIPONLY = gg.multiChoice({
 
 if VIPONLY == nil then else
   if VIPONLY[1]== true then LOGO() end
-  if VIPONLY[2]== true then LOBBY() end
+  
+if VIPONLY[2]== true then MAGIC1() end
+if VIPONLY[3]== true then MAGIC2() end
 
-if VIPONLY[3]== true then MAGIC1() end
-if VIPONLY[4]== true then MAGIC2() end
 
-
- if VIPONLY[5]== true then admin() end
+ if VIPONLY[4]== true then admin() end
 
      
- if VIPONLY[6]== true then exitt() end
+ if VIPONLY[5]== true then exitt() end
 
 
 
@@ -251,57 +249,7 @@ gg.clearResults()
 end
 
 
-function LOBBY()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("131331;133,634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("131,331", gg.TYPE_DWORD)
-gg.getResults(5000000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("134,914;144,387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("134,914", gg.TYPE_DWORD)
-gg.getResults(5000000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("134,658;134,658", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("134,658", gg.TYPE_DWORD)
-gg.getResults(5000000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("144,387;133,634", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("144,387", gg.TYPE_DWORD)
-gg.getResults(500000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("133,378;144,387", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("133,378", gg.TYPE_DWORD)
-gg.getResults(500000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("196,864;16,842", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("196,864", gg.TYPE_DWORD)
-gg.getResults(500000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC)
-gg.searchNumber("262,144;262,149", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber("262,149", gg.TYPE_DWORD)
-gg.getResults(500000)
-gg.editAll("67,175,171", gg.TYPE_DWORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
-gg.searchNumber("262,400;262,656",gg.TYPE_QWORD)
-gg.refineNumber("262,400",gg.TYPE_QWORD)
-gg.getResults(50000)
-gg.editAll("67,175,171",gg.TYPE_QWORD)
-gg.clearResults()
-gg.alert("Bypass Lobby ✅")
-end
+
 
 
 function admin()
