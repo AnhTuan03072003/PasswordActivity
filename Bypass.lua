@@ -243,7 +243,7 @@ function MAGIC2()
  gg.setRanges(gg.REGION_ANONYMOUS)
  gg.searchNumber("69.5;35;33", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
  gg.getResults(3)
- gg.editAll("120", gg.TYPE_FLOAT)
+ gg.editAll("100", gg.TYPE_FLOAT)
 gg.clearResults()
 	gg.alert("Magic Bullet ✅")
 end
