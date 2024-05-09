@@ -1,4 +1,26 @@
+local gg = gg;
+local die = os.exit;
+local security;
 
+local key = "1083dc593e064c30bdc9a3100e49a299";
+local api = "https://vpnapi.io/api/%s?key=%s";
+
+local json = {
+  decode = function(js)
+    local l = "return " .. js:gsub('("[^"]-"):','[%1]=');
+    local tbl = load(l)();
+    return tbl;
+  end
+};
+
+local ipAddress = gg.makeRequest("https://api.ipify.org").content;
+security = gg.makeRequest(api:format(ipAddress, key)).content;
+security = json.decode(security).security;
+
+if (security.vpn or security.proxy) then
+  gg.alert("Vpn hoặc Proxy đã được phát hiện, hãy đảm bảo tắt chúng để tiếp tục.");
+  die();
+end
 
 local function pass(...)
 
